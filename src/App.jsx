@@ -5,12 +5,11 @@ import Home from "./Component/Home";
 import About from "./Component/About";
 import Service from "./Component/Service";
 import Contact from "./Component/Contact";
-import BrandingDigitalHero from "./Component/BrandingDigitalHero";
-// import FitnessAppLanding from "./Component/Mobile/Fitnessapplanding";
-import PhoneCarousel from "./Component/Mobile/Fitnessapplanding";
 import FitnessApp from "./Component/Mobile/Fitnessapplanding";
 import MobileOnboarding from "./Component/Mobile/Mobilebraing";
 import FitnessAppLanding from "./Component/Mobile/Fitnessapplanding";
+import Technology from "./Technology/Technology";
+import TechNews from "./Technology/TechNews";
 const App = () => {
   return (
     <div>
@@ -27,6 +26,8 @@ const App = () => {
             <Route path="mobile-onboarding" element={<MobileOnboarding />} />
             <Route path="branding" element={<FitnessApp />} />
             <Route path="fitness" element={<FitnessAppLanding />} />
+            <Route path="technology" element={<Technology />} />
+            <Route path="technews" element={<TechNews />} />
 
             
           </Route>

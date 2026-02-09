@@ -101,17 +101,19 @@
 
 // export default Navbar;
 
-
 // src/components/Navbar.jsx
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import ALTAknots from  "./Mobile/img/ALTAKnots.png"; // Ensure this path is correct based on your project structure
 
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   { name: "Features", path: "/service" },
   { name: "Pricing", path: "/pricing" },
+  { name: "Technology", path: "/technology" },
+  { name: "Tech news", path: "/technews" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -129,8 +131,10 @@ const Navbar = () => {
             <NavLink
               to="/"
               className="text-2xl md:text-3xl font-extrabold tracking-tight bg-linear-to-r from-white to-white bg-clip-text text-transparent hover:from-red-400 hover:via-white hover:to-red-400 transition-all duration-500"
-            >
-              Alta Knots
+            > 
+              <div className="flex items-center gap-2">
+              <img src={ALTAknots} alt="ALTAKnots Logo" className="h-10 w-10 md:h-18 pt-5 md:w-50 " />
+            </div>
             </NavLink>
             {/* Optional small tagline - remove if not needed */}
             {/* <p className="text-xs text-gray-500 mt-0.5">IT Solutions</p> */}
