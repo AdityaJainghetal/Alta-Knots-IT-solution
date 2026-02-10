@@ -1,5 +1,3 @@
-
-
 // import React, { useCallback, useEffect, useRef, useState } from "react";
 // import Particles from "@tsparticles/react";
 // import { loadSlim } from "@tsparticles/slim";
@@ -190,7 +188,7 @@
 //           <div className="absolute inset-0 z-0">
 //             <div className="absolute inset-0 bg-gradient-to-br from-red-950/30 via-black to-black" />
 //             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[90%] h-[70%] bg-red-600/10 blur-3xl rounded-full opacity-70 animate-pulse" />
-            
+
 //             {/* Floating geometric shapes */}
 //             <motion.div
 //               animate={{
@@ -242,7 +240,7 @@
 //                   </span>
 //                 </h1>
 //               </motion.div>
-              
+
 //               <motion.h2
 //                 variants={fadeInUp}
 //                 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mt-4"
@@ -272,7 +270,7 @@
 //   <div className="container-xxl py-5" id="about">
 //       <div className="container py-5 px-lg-5">
 //         <div className="row g-5 align-items-center">
-          
+
 //           {/* Left Content */}
 //           <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
 //             <h5 className="text-primary-gradient fw-medium">About App</h5>
@@ -479,7 +477,7 @@
 //               >
 //                 <div className="w-20 h-20 border-4 border-red-600/30 rounded-full" />
 //               </motion.div>
-              
+
 //               <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-8">
 //                 ABOUT{" "}
 //                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-400 to-red-500">
@@ -523,7 +521,7 @@
 //                 >
 //                   {/* Card background with gradient */}
 //                   <div className="absolute inset-0 bg-gradient-to-br from-red-950/30 to-black/50 rounded-3xl blur-xl group-hover:blur-2xl transition-all" />
-                  
+
 //                   <div className="relative bg-gradient-to-br from-gray-900/80 to-black/90 backdrop-blur-xl border-2 border-red-600/20 rounded-3xl p-8 text-center hover:border-red-500/50 transition-all duration-300 overflow-hidden">
 //                     {/* Animated background circle */}
 //                     <motion.div
@@ -531,7 +529,7 @@
 //                       transition={{ duration: 3, repeat: Infinity }}
 //                       className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br ${stat.color} rounded-full blur-2xl opacity-30`}
 //                     />
-                    
+
 //                     <div className="relative z-10">
 //                       <motion.div
 //                         whileHover={{ rotate: 360, scale: 1.2 }}
@@ -542,12 +540,12 @@
 //                           <stat.icon className="w-8 h-8 text-white" />
 //                         </div>
 //                       </motion.div>
-                      
+
 //                       <h3 className="text-5xl md:text-6xl font-black text-white mb-3 group-hover:text-red-400 transition-colors">
 //                         {stat.number}
 //                       </h3>
 //                       <p className="text-lg text-gray-300 font-medium">{stat.label}</p>
-                      
+
 //                       {/* Progress bar */}
 //                       <motion.div
 //                         initial={{ width: 0 }}
@@ -562,7 +560,6 @@
 //             </motion.div>
 
 //             {/* Mission Section with Phone Mockup Design */}
-           
 
 //             {/* Core Values with enhanced cards */}
 //             <motion.div
@@ -613,7 +610,7 @@
 //                   >
 //                     {/* Glowing background */}
 //                     <div className="absolute inset-0 bg-gradient-to-br from-red-950/30 to-black/50 rounded-3xl blur-2xl group-hover:blur-3xl transition-all" />
-                    
+
 //                     <div className="relative bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-xl border-2 border-red-600/20 rounded-3xl p-10 text-center hover:border-red-500/50 transition-all duration-300 overflow-hidden">
 //                       {/* Animated background */}
 //                       <motion.div
@@ -625,7 +622,7 @@
 //                         transition={{ duration: 10, repeat: Infinity }}
 //                         className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${value.color} rounded-full blur-3xl`}
 //                       />
-                      
+
 //                       <div className="relative z-10">
 //                         <motion.div
 //                           whileHover={{ rotate: 360, scale: 1.2 }}
@@ -636,14 +633,14 @@
 //                             <value.icon className="w-10 h-10 text-white" />
 //                           </div>
 //                         </motion.div>
-                        
+
 //                         <h4 className="text-3xl md:text-4xl font-black mb-6 group-hover:text-red-400 transition-colors">
 //                           {value.title}
 //                         </h4>
 //                         <p className="text-gray-300 text-lg leading-relaxed">
 //                           {value.desc}
 //                         </p>
-                        
+
 //                         {/* Decorative line */}
 //                         <motion.div
 //                           initial={{ scaleX: 0 }}
@@ -695,12 +692,12 @@
 //                             <div key={i} className="w-6 h-6 text-red-500">★</div>
 //                           ))}
 //                         </div>
-                        
+
 //                         {/* Quote */}
 //                         <p className="text-2xl md:text-3xl text-gray-100 leading-relaxed mb-8 font-light italic">
 //                           "{testimonial.text}"
 //                         </p>
-                        
+
 //                         {/* Author */}
 //                         <div className="flex items-center gap-4">
 //                           <div className="w-14 h-14 rounded-full bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center">
@@ -753,7 +750,6 @@
 
 //             <MobileOnboarding/>
 
-            
 //               <div className="relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-xl border-2 border-red-600/30 rounded-[3rem] p-12 md:p-16 lg:p-20">
 //                 <motion.div
 //                   animate={{ scale: [1, 1.05, 1] }}
@@ -829,6 +825,8 @@ import {
 } from "lucide-react";
 import HeroSection from "./HeroSection";
 import MobileOnboarding from "./Mobile/Mobilebraing";
+import img4 from "../Component/Mobile/img/image12.png";
+import img5 from "../Component/Mobile/img/image11.png";
 // import FitnessApp from "./Mobile/Fitnessapplanding"; // uncomment if needed
 
 // ────────────────────────────────────────────────
@@ -891,7 +889,11 @@ const fadeInRight = {
 
 const scaleIn = {
   hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.6, ease: "easeOut" } },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
 };
 
 const staggerContainer = {
@@ -919,7 +921,7 @@ const About = () => {
           }
         });
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
     sectionRefs.current.forEach((ref) => {
@@ -1016,6 +1018,96 @@ const About = () => {
               — so your business can focus on growth, not technology.
             </motion.p>
 
+         
+<div className="flex flex-col md:flex-row items-center justify-between gap-10 mb-20">
+  {/* Text Content */}
+  <div className="w-full md:w-1/2">
+    <h3 className="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+      Building the <span className="text-primary">Future</span> of Business
+      Technology
+    </h3>
+
+    <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-lg">
+      At <span className="font-semibold text-white">Alta Knots</span>, we believe
+      technology should empower—not complicate. Our expert team delivers custom
+      software, mobile apps, cloud solutions, and 24/7 BPO support that drive real
+      business results.
+    </p>
+
+    <button className="mt-8 px-8 py-3 rounded-full bg-primary text-white font-semibold hover:bg-primary/90 transition">
+      Get Started
+    </button>
+  </div>
+
+  {/* Image */}
+  {/* <div className="w-full md:w-1/2 flex justify-center">
+    <img
+      src={img4}
+      alt="Tech Collaboration"
+      className="rounded-3xl w-full max-w-2xl shadow-2xl shadow-red-900/50"
+    />
+  </div> */}
+  <div className="w-full md:w-1/2 flex justify-center">
+  <img
+    src={img4}
+    alt="Tech Collaboration"
+    className="w-full max-w-2xl mt-6"
+  />
+</div>
+
+</div>
+
+
+
+
+<div className="flex flex-col md:flex-row items-center justify-between gap-10 mb-20">
+  {/* Text Content */}
+  <div className="w-full md:w-1/2">
+    <h3 className="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+      Building the <span className="text-primary">Future</span> of Business
+      Technology
+    </h3>
+
+    <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-lg">
+      At <span className="font-semibold text-white">Alta Knots</span>, we believe
+      technology should empower—not complicate. Our expert team delivers custom
+      software, mobile apps, cloud solutions, and 24/7 BPO support that drive real
+      business results.
+    </p>
+
+    <button className="mt-8 px-8 py-3 rounded-full bg-primary text-white font-semibold hover:bg-primary/90 transition">
+      Get Started
+    </button>
+  </div>
+
+  {/* Image */}
+  {/* <div className="w-full md:w-1/2 flex justify-center">
+    <img
+      src={img4}
+      alt="Tech Collaboration"
+      className="rounded-3xl w-full max-w-2xl shadow-2xl shadow-red-900/50"
+    />
+  </div> */}
+  {/* <div className="w-full md:w-1/2 flex justify-center">
+  <img
+    src={img5}
+    alt="Tech Collaboration"
+    className="w-full max-w-2xl mt-6"
+  />
+</div> */}
+
+
+<div className="w-full md:w-1/2 flex justify-center bg-transparent">
+  <img
+    src={img5}
+    alt="Tech Collaboration"
+    className="w-full max-w-2xl mt-6 bg-transparent"
+  />
+</div>
+</div>
+
+
+
             {/* Floating chat-style messages */}
             <motion.div variants={fadeInUp} className="relative mb-20">
               <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 flex-wrap">
@@ -1030,7 +1122,8 @@ const About = () => {
                     <p className="text-red-400 font-bold text-lg">Alta Knots</p>
                   </div>
                   <p className="text-gray-100">
-                    Bonjour! Ready to transform your business with secure software & reliable support?
+                    Bonjour! Ready to transform your business with secure
+                    software & reliable support?
                   </p>
                 </motion.div>
 
@@ -1045,7 +1138,8 @@ const About = () => {
                     <p className="text-red-300 font-bold text-lg">You</p>
                   </div>
                   <p className="text-gray-100">
-                    Yes! We need a strong website, mobile app & 24/7 BPO support...
+                    Yes! We need a strong website, mobile app & 24/7 BPO
+                    support...
                   </p>
                 </motion.div>
 
@@ -1060,7 +1154,8 @@ const About = () => {
                     <p className="text-red-400 font-bold text-lg">Alta Knots</p>
                   </div>
                   <p className="text-gray-100">
-                    Perfect! Let's build it together — fast, secure & scalable. 🚀
+                    Perfect! Let's build it together — fast, secure & scalable.
+                    🚀
                   </p>
                 </motion.div>
               </div>
@@ -1106,7 +1201,8 @@ const About = () => {
                 ABOUT <span className="text-red-500">ALTA KNOTS</span>
               </h2>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
-                Technology that connects. Solutions that deliver. Partnerships that last.
+                Technology that connects. Solutions that deliver. Partnerships
+                that last.
               </p>
             </motion.div>
 
@@ -1120,12 +1216,17 @@ const About = () => {
             >
               {/* Left - Text */}
               <motion.div variants={fadeInLeft} className="space-y-6">
-                <h5 className="text-red-400 font-semibold text-xl">About Our Solution</h5>
+                <h5 className="text-red-400 font-semibold text-xl">
+                  About Our Solution
+                </h5>
                 <h2 className="text-4xl md:text-5xl font-bold">
                   #1 App For Your Fitness
                 </h2>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                  Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo eirmod magna dolore erat amet.
+                  Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et
+                  eos labore. Clita erat ipsum et lorem et sit, sed stet no
+                  labore lorem sit clita duo justo eirmod magna dolore erat
+                  amet.
                 </p>
 
                 <div className="grid grid-cols-2 gap-8 my-8">
@@ -1225,7 +1326,9 @@ const About = () => {
                     key={i}
                     onClick={() => setActiveTestimonial(i)}
                     className={`h-3 rounded-full transition-all ${
-                      i === activeTestimonial ? "w-10 bg-red-600" : "w-3 bg-gray-700"
+                      i === activeTestimonial
+                        ? "w-10 bg-red-600"
+                        : "w-3 bg-gray-700"
                     }`}
                   />
                 ))}
@@ -1240,10 +1343,12 @@ const About = () => {
               className="text-center py-20"
             >
               <h3 className="text-5xl md:text-6xl font-black mb-8">
-                Ready to build something <span className="text-red-500">great</span> together?
+                Ready to build something{" "}
+                <span className="text-red-500">great</span> together?
               </h3>
               <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-                Let's turn your vision into reality. Our team is ready to start today.
+                Let's turn your vision into reality. Our team is ready to start
+                today.
               </p>
               <button className="px-12 py-6 bg-gradient-to-r from-red-600 to-red-800 rounded-full text-2xl font-bold shadow-2xl hover:shadow-red-900/70 transition">
                 LET'S START THE CONVERSATION →
