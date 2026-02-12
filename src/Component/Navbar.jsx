@@ -796,8 +796,8 @@ const navItems = [
       // Add more items here if needed
     ],
   },
-  { name: "Features", path: "/service" },
-  { name: "Pricing", path: "/pricing" },
+  { name: "Service", path: "/service" },
+  // { name: "Pricing", path: "/pricing" },
   { name: "Technology", path: "/technology" },
   { name: "Tech News", path: "/technews" },
   { name: "Contact", path: "/contact" },
