@@ -3,6 +3,8 @@ import { Newspaper, ExternalLink, Clock, Cpu, Zap, Globe } from 'lucide-react';
 
 const TechNews = () => {
   // You can update / add your own company news here
+  
+  
   const newsItems = [
     {
       id: 1,

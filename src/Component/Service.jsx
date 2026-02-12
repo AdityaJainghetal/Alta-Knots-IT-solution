@@ -1732,7 +1732,7 @@ const Service = () => {
                 initial="rest"
                 whileHover="hover"
                 variants={imageHover}
-                className="w-full h-96 lg:h-[620px]"
+                className="w-full h-96 lg:h-[920px]"
               >
                 <img
                   src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80"
