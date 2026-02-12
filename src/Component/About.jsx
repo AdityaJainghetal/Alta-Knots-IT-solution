@@ -33,9 +33,6 @@ import MobileOnboarding from "./Mobile/Mobilebraing";
 import img4 from "../Component/Mobile/img/image3.png";
 import img5 from "../Component/Mobile/img/image11.png";
 
-// ────────────────────────────────────────────────
-// 3D COMPONENTS
-// ────────────────────────────────────────────────
 
 const AnimatedSphere = ({ position, color }) => {
   const meshRef = useRef();
@@ -391,61 +388,67 @@ const About = () => {
           </motion.p>
 
           {/* Content + Image Blocks */}
-          <div className="space-y-30 lg:space-y-24">
-            {/* Block 1 */}
-            <div className="flex flex-col md:flex-row items-center gap-5 lg:gap-16">
-              <div className="w-full md:w-5/12 text-left">
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
-                  Building the <span className="text-red-500">Future</span> of
-                  Business Technology
-                </h3>
-                <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
-                  At{" "}
-                  <span className="font-semibold text-white">ATLA Knots</span>,
-                  we believe technology should empower—not complicate. Our
-                  expert team delivers custom software, mobile apps, cloud
-                  solutions, and 24/7 BPO support that drive real business
-                  results.
-                </p>
-                <button className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-full font-semibold transition">
-                  Get Started
-                </button>
-              </div>
-              <div className="w-full md:w-7/12 flex justify-center">
-                <img
-                  src={img4}
-                  alt="Tech Collaboration"
-                  className="w-full max-w-2xl lg:max-w-3xl object-contain"
-                />
-              </div>
-            </div>
+    <div className="space-y-24 lg:space-y-40"> {/* increased vertical spacing between blocks */}
 
-            {/* Block 2 */}
-            <div className="flex flex-col md:flex-row-reverse items-center gap-10 lg:gap-16">
-              <div className="w-full md:w-5/12 text-left">
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
-                  Innovation Meets{" "}
-                  <span className="text-red-500">Excellence</span>
-                </h3>
-                <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8">
-                  With cutting-edge technology and a client-first approach, we
-                  transform businesses through seamless digital solutions.
-                  Experience the power of innovation with ATLA Knots.
-                </p>
-                <button className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-full font-semibold transition">
-                  Learn More
-                </button>
-              </div>
-              <div className="w-full md:w-7/12 flex justify-center">
-                <img
-                  src={img5}
-                  alt="Tech Innovation"
-                  className="w-full max-w-2xl lg:max-w-3xl object-contain"
-                />
-              </div>
-            </div>
-          </div>
+  {/* Block 1 - Image right side, full bleed + top padding */}
+  <div className="relative flex flex-col md:flex-row items-stretch gap-0 min-h-[500px] lg:min-h-[680px] pt-16 md:pt-24 lg:pt-32 xl:pt-40">
 
+    {/* Text - left side */}
+    <div className="w-full md:w-5/12 lg:w-4/12 xl:w-5/12 pl-6 md:pl-12 lg:pl-16 xl:pl-24 pr-6 md:pr-10 lg:pr-16 py-12 md:py-16 lg:py-20 bg-gradient-to-r from-gray-900/80 to-transparent z-10 flex flex-col justify-center order-2 md:order-1">
+      <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
+        Building the <span className="text-red-500">Future</span> of Business Technology
+      </h3>
+      <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 max-w-xl">
+        At <span className="font-semibold text-white">ATLA Knots</span>, we believe technology should empower—not complicate. 
+        Our expert team delivers custom software, mobile apps, cloud solutions, and 24/7 BPO support that drive real business results.
+      </p>
+      <button className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-full font-semibold transition duration-300 w-fit">
+        Get Started
+      </button>
+    </div>
+
+    {/* Image - right side, full bleed */}
+    <div className="w-full md:w-7/12 lg:w-8/12 xl:w-9/12 relative order-1 md:order-2 overflow-hidden">
+      <div className="absolute inset-0">
+        <img
+          src={img4}
+          alt="Tech Collaboration"
+          className="w-full h-full object-cover rounded-l-3xl md:rounded-l-none shadow-2xl"
+        />
+      </div>
+    </div>
+  </div>
+
+  {/* Block 2 - Image left side, full bleed + top padding */}
+  <div className="relative flex flex-col md:flex-row-reverse items-stretch gap-0 min-h-[500px] lg:min-h-[680px] pt-16 md:pt-24 lg:pt-32 xl:pt-40">
+
+    {/* Text */}
+    <div className="w-full md:w-5/12 lg:w-4/12 xl:w-5/12 pr-6 md:pr-12 lg:pr-16 xl:pr-24 pl-6 md:pl-10 lg:pl-16 py-12 md:py-16 lg:py-20 bg-gradient-to-l from-gray-900/80 to-transparent z-10 flex flex-col justify-center order-2 md:order-2">
+      <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
+        Innovation Meets <span className="text-red-500">Excellence</span>
+      </h3>
+      <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 max-w-xl">
+        With cutting-edge technology and a client-first approach, we transform businesses through seamless digital solutions. 
+        Experience the power of innovation with ATLA Knots.
+      </p>
+      <button className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-full font-semibold transition duration-300 w-fit">
+        Learn More
+      </button>
+    </div>
+
+    {/* Image - left side, full bleed */}
+    <div className="w-full md:w-7/12 lg:w-8/12 xl:w-9/12 relative order-1 md:order-1 overflow-hidden">
+      <div className="absolute inset-0">
+        <img
+          src={img5}
+          alt="Tech Innovation"
+          className="w-full h-full object-cover rounded-r-3xl md:rounded-r-none shadow-2xl"
+        />
+      </div>
+    </div>
+  </div>
+
+</div>
           {/* CTA Buttons */}
           <motion.div
             variants={fadeInUp}
