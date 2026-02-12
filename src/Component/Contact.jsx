@@ -2,8 +2,8 @@
 // import Particles from '@tsparticles/react';
 // import { loadSlim } from '@tsparticles/slim';
 // import { motion } from 'framer-motion';
-// import { 
-//   Mail, Phone, MapPin, Send, Building2, Clock, CheckCircle, AlertCircle 
+// import {
+//   Mail, Phone, MapPin, Send, Building2, Clock, CheckCircle, AlertCircle
 // } from 'lucide-react';
 // import axios from 'axios';
 
@@ -78,9 +78,9 @@
 //       });
 
 //       if (response.data.success) {
-//         setStatus({ 
-//           type: 'success', 
-//           message: 'Message sent successfully! We will get back to you soon.' 
+//         setStatus({
+//           type: 'success',
+//           message: 'Message sent successfully! We will get back to you soon.'
 //         });
 //         setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
 //       }
@@ -159,8 +159,8 @@
 //                     <div>
 //                       <h3 className="text-xl font-semibold text-white">Email</h3>
 //                       <p className="mt-2 text-gray-300">
-//                         <a href="mailto:altaknotssolution@gmail.com" className="hover:text-cyan-400 transition">
-//                           altaknotssolution@gmail.com
+//                         <a href="mailto:ATLAknotssolution@gmail.com" className="hover:text-cyan-400 transition">
+//                           ATLAknotssolution@gmail.com
 //                         </a>
 //                       </p>
 //                     </div>
@@ -196,8 +196,8 @@
 //                   {/* Status Messages */}
 //                   {status.message && (
 //                     <div className={`mb-6 p-4 rounded-lg flex items-center gap-3 ${
-//                       status.type === 'success' 
-//                         ? 'bg-green-900/40 border border-green-500/50 text-green-300' 
+//                       status.type === 'success'
+//                         ? 'bg-green-900/40 border border-green-500/50 text-green-300'
 //                         : 'bg-red-900/40 border border-red-500/50 text-red-300'
 //                     }`}>
 //                       {status.type === 'success' ? <CheckCircle size={20} /> : <AlertCircle size={20} />}
@@ -288,7 +288,7 @@
 //                   className="bg-gray-900/50 border border-gray-700 rounded-2xl overflow-hidden shadow-2xl h-96"
 //                 >
 //                   <iframe
-//                     title="Alta Knots Office Location - MP Nagar, Bhopal"
+//                     title="ATLA Knots Office Location - MP Nagar, Bhopal"
 //                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.058!2d77.430!3d23.199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39631f8a00000001%3A0x0!2sM.P.+Nagar+Zone+2%2C+Bhopal%2C+Madhya+Pradesh+462011!5e0!3m2!1sen!2sin!4v1738000000000!5m2!1sen!2sin"
 //                     width="100%"
 //                     height="100%"
@@ -313,8 +313,8 @@
 // import Particles from '@tsparticles/react';
 // import { loadSlim } from '@tsparticles/slim';
 // import { motion } from 'framer-motion';
-// import { 
-//   Mail, Phone, MapPin, Send, Building2, Clock, CheckCircle, AlertCircle 
+// import {
+//   Mail, Phone, MapPin, Send, Building2, Clock, CheckCircle, AlertCircle
 // } from 'lucide-react';
 // import axios from 'axios';
 
@@ -388,9 +388,9 @@
 //       });
 
 //       if (response.data.success) {
-//         setStatus({ 
-//           type: 'success', 
-//           message: 'Message sent successfully! We will get back to you soon.' 
+//         setStatus({
+//           type: 'success',
+//           message: 'Message sent successfully! We will get back to you soon.'
 //         });
 //         setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
 //       }
@@ -469,8 +469,8 @@
 //                     <div>
 //                       <h3 className="text-xl font-semibold text-white">Email</h3>
 //                       <p className="mt-2 text-gray-300">
-//                         <a href="mailto:altaknotssolution@gmail.com" className="hover:text-red-400 transition">
-//                           altaknotssolution@gmail.com
+//                         <a href="mailto:ATLAknotssolution@gmail.com" className="hover:text-red-400 transition">
+//                           ATLAknotssolution@gmail.com
 //                         </a>
 //                       </p>
 //                     </div>
@@ -506,8 +506,8 @@
 //                   {/* Status Messages */}
 //                   {status.message && (
 //                     <div className={`mb-6 p-4 rounded-lg flex items-center gap-3 ${
-//                       status.type === 'success' 
-//                         ? 'bg-green-950/50 border border-green-700/60 text-green-300' 
+//                       status.type === 'success'
+//                         ? 'bg-green-950/50 border border-green-700/60 text-green-300'
 //                         : 'bg-red-950/50 border border-red-700/60 text-red-300'
 //                     }`}>
 //                       {status.type === 'success' ? <CheckCircle size={20} /> : <AlertCircle size={20} />}
@@ -575,8 +575,8 @@
 //                       type="submit"
 //                       disabled={loading}
 //                       className={`w-full px-10 py-5 bg-gradient-to-r from-red-600 to-rose-600 text-white font-semibold rounded-xl shadow-lg shadow-red-900/40 transition-all flex items-center justify-center gap-3 ${
-//                         loading 
-//                           ? 'opacity-70 cursor-not-allowed' 
+//                         loading
+//                           ? 'opacity-70 cursor-not-allowed'
 //                           : 'hover:from-red-700 hover:to-rose-700 hover:shadow-red-600/50 hover:-translate-y-1'
 //                       }`}
 //                     >
@@ -600,7 +600,7 @@
 //                   className="bg-gray-950/70 border border-gray-800 rounded-2xl overflow-hidden shadow-2xl shadow-red-950/30 h-96"
 //                 >
 //                   <iframe
-//                     title="Alta Knots Office Location - MP Nagar, Bhopal"
+//                     title="ATLA Knots Office Location - MP Nagar, Bhopal"
 //                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.058!2d77.430!3d23.199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39631f8a00000001%3A0x0!2sM.P.+Nagar+Zone+2%2C+Bhopal%2C+Madhya+Pradesh+462011!5e0!3m2!1sen!2sin!4v1738000000000!5m2!1sen!2sin"
 //                     width="100%"
 //                     height="100%"
@@ -621,27 +621,24 @@
 
 // export default Contact;
 
-
-import React, { useCallback, useState } from 'react';
-import Particles from '@tsparticles/react';
-import { loadSlim } from '@tsparticles/slim';
-import { motion } from 'framer-motion';
-import { 
-  Mail, Phone, Building2, Clock, Send 
-} from 'lucide-react';
-import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // Don't forget to import CSS
+import React, { useCallback, useState } from "react";
+import Particles from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import { motion } from "framer-motion";
+import { Mail, Phone, Building2, Clock, Send } from "lucide-react";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Don't forget to import CSS
 
 // Particles config (unchanged - red theme)
 const particlesOptions = {
   fullScreen: { enable: true, zIndex: -1 },
-  background: { color: { value: 'transparent' } },
+  background: { color: { value: "transparent" } },
   fpsLimit: 60,
   interactivity: {
     events: {
-      onClick: { enable: true, mode: 'push' },
-      onHover: { enable: true, mode: 'repulse' },
+      onClick: { enable: true, mode: "push" },
+      onHover: { enable: true, mode: "repulse" },
       resize: true,
     },
     modes: {
@@ -650,12 +647,25 @@ const particlesOptions = {
     },
   },
   particles: {
-    color: { value: ['#ef4444', '#f87171', '#dc2626'] },
-    links: { color: '#ffffff', distance: 150, enable: true, opacity: 0.20, width: 1 },
-    move: { direction: 'none', enable: true, outModes: { default: 'bounce' }, random: true, speed: 1.3, straight: false },
+    color: { value: ["#ef4444", "#f87171", "#dc2626"] },
+    links: {
+      color: "#ffffff",
+      distance: 150,
+      enable: true,
+      opacity: 0.2,
+      width: 1,
+    },
+    move: {
+      direction: "none",
+      enable: true,
+      outModes: { default: "bounce" },
+      random: true,
+      speed: 1.3,
+      straight: false,
+    },
     number: { density: { enable: true, area: 800 }, value: 80 },
-    opacity: { value: 0.50 },
-    shape: { type: 'circle' },
+    opacity: { value: 0.5 },
+    shape: { type: "circle" },
     size: { value: { min: 1, max: 5 } },
   },
   detectRetina: true,
@@ -663,12 +673,19 @@ const particlesOptions = {
 
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.3 } },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2, delayChildren: 0.3 },
+  },
 };
 
 const itemVariants = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 120, damping: 14 } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 120, damping: 14 },
+  },
 };
 
 const Contact = () => {
@@ -677,10 +694,10 @@ const Contact = () => {
   }, []);
 
   const [formData, setFormData] = useState({
-    usernamee: '',
-    email: '',
-    phone: '',
-    message: ''
+    usernamee: "",
+    email: "",
+    phone: "",
+    message: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -695,33 +712,36 @@ const Contact = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:8000/api/contact/create',
+        "http://localhost:8000/api/contact/create",
         formData,
         {
-          headers: { 'Content-Type': 'application/json' },
-        }
+          headers: { "Content-Type": "application/json" },
+        },
       );
 
       // Success toast
-      toast.success('Message sent successfully! We will get back to you soon.', {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        theme: "dark",
-      });
+      toast.success(
+        "Message sent successfully! We will get back to you soon.",
+        {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "dark",
+        },
+      );
 
       // Reset form
-      setFormData({ usernamee: '', email: '', phone: '', message: '' });
+      setFormData({ usernamee: "", email: "", phone: "", message: "" });
     } catch (error) {
-      console.error('Contact form error:', error);
+      console.error("Contact form error:", error);
 
-      const errorMsg = 
-        error.response?.data?.message || 
-        error.response?.data?.error || 
-        'Something went wrong. Please try again.';
+      const errorMsg =
+        error.response?.data?.message ||
+        error.response?.data?.error ||
+        "Something went wrong. Please try again.";
 
       // Error toast
       toast.error(errorMsg, {
@@ -741,7 +761,7 @@ const Contact = () => {
   return (
     <div className="relative min-h-screen bg-black text-gray-100 overflow-hidden">
       {/* Add ToastContainer here */}
-      <ToastContainer 
+      <ToastContainer
         position="top-right"
         autoClose={5000}
         hideProgressBar={false}
@@ -754,7 +774,12 @@ const Contact = () => {
         theme="dark"
       />
 
-      <Particles id="tsparticles-contact" init={particlesInit} options={particlesOptions} className="absolute inset-0 z-0" />
+      <Particles
+        id="tsparticles-contact"
+        init={particlesInit}
+        options={particlesOptions}
+        className="absolute inset-0 z-0"
+      />
 
       <div className="relative z-10">
         {/* Hero Section */}
@@ -762,13 +787,23 @@ const Contact = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-red-950/30 to-red-900/10 pointer-events-none"></div>
 
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div variants={containerVariants} initial="hidden" animate="visible">
-              <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+            >
+              <motion.h1
+                variants={itemVariants}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight"
+              >
                 <span className="bg-gradient-to-r from-red-500 via-red-400 to-rose-500 bg-clip-text text-transparent">
                   Get in Touch
                 </span>
               </motion.h1>
-              <motion.p variants={itemVariants} className="mt-6 text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+              <motion.p
+                variants={itemVariants}
+                className="mt-6 text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto"
+              >
                 Have questions or ready to start a project? We're here to help.
               </motion.p>
             </motion.div>
@@ -779,10 +814,16 @@ const Contact = () => {
         <section className="py-16 md:py-24 border-t border-gray-800 bg-black/60 backdrop-blur-sm">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12">
-
               {/* Left: Contact Info */}
-              <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">Contact Information</h2>
+              <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">
+                  Contact Information
+                </h2>
 
                 <div className="space-y-8">
                   <div className="flex items-start gap-5">
@@ -790,11 +831,16 @@ const Contact = () => {
                       <Building2 className="h-7 w-7 text-red-500" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-white">Our Office</h3>
+                      <h3 className="text-xl font-semibold text-white">
+                        Our Office
+                      </h3>
                       <p className="mt-2 text-gray-300 leading-relaxed">
-                        103, Goyal Vihar,<br />
-                        Plot No 31-C, Zone 2,<br />
-                        M.P. Nagar, Bhopal - 462011<br />
+                        103, Goyal Vihar,
+                        <br />
+                        Plot No 31-C, Zone 2,
+                        <br />
+                        M.P. Nagar, Bhopal - 462011
+                        <br />
                         Madhya Pradesh, India
                       </p>
                     </div>
@@ -805,9 +851,16 @@ const Contact = () => {
                       <Phone className="h-7 w-7 text-red-500" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-white">Phone</h3>
+                      <h3 className="text-xl font-semibold text-white">
+                        Phone
+                      </h3>
                       <p className="mt-2 text-gray-300">
-                        <a href="tel:+917869636070" className="hover:text-red-400 transition">+91 78696 36070</a>
+                        <a
+                          href="tel:+917869636070"
+                          className="hover:text-red-400 transition"
+                        >
+                          +91 78696 36070
+                        </a>
                       </p>
                     </div>
                   </div>
@@ -817,10 +870,15 @@ const Contact = () => {
                       <Mail className="h-7 w-7 text-red-500" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-white">Email</h3>
+                      <h3 className="text-xl font-semibold text-white">
+                        Email
+                      </h3>
                       <p className="mt-2 text-gray-300">
-                        <a href="mailto:altaknotssolution@gmail.com" className="hover:text-red-400 transition">
-                          altaknotssolution@gmail.com
+                        <a
+                          href="mailto:ATLAknotssolution@gmail.com"
+                          className="hover:text-red-400 transition"
+                        >
+                          ATLAknotssolution@gmail.com
                         </a>
                       </p>
                     </div>
@@ -831,9 +889,12 @@ const Contact = () => {
                       <Clock className="h-7 w-7 text-red-500" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-white">Working Hours</h3>
+                      <h3 className="text-xl font-semibold text-white">
+                        Working Hours
+                      </h3>
                       <p className="mt-2 text-gray-300">
-                        Mon – Sat: 10:00 AM – 7:00 PM<br />
+                        Mon – Sat: 10:00 AM – 7:00 PM
+                        <br />
                         Sunday: Closed
                       </p>
                     </div>
@@ -850,7 +911,9 @@ const Contact = () => {
                   viewport={{ once: true }}
                   className="bg-gray-950/70 border border-gray-800 rounded-2xl p-8 md:p-10 backdrop-blur-sm shadow-2xl shadow-red-950/30"
                 >
-                  <h2 className="text-3xl font-bold text-white mb-8">Send Us a Message</h2>
+                  <h2 className="text-3xl font-bold text-white mb-8">
+                    Send Us a Message
+                  </h2>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid sm:grid-cols-2 gap-6">
@@ -901,9 +964,9 @@ const Contact = () => {
                       type="submit"
                       disabled={loading}
                       className={`w-full px-10 py-5 bg-gradient-to-r from-red-600 to-rose-600 text-white font-semibold rounded-xl shadow-lg shadow-red-900/40 transition-all flex items-center justify-center gap-3 ${
-                        loading 
-                          ? 'opacity-70 cursor-not-allowed' 
-                          : 'hover:from-red-700 hover:to-rose-700 hover:shadow-red-600/50 hover:-translate-y-1'
+                        loading
+                          ? "opacity-70 cursor-not-allowed"
+                          : "hover:from-red-700 hover:to-rose-700 hover:shadow-red-600/50 hover:-translate-y-1"
                       }`}
                     >
                       {loading ? (
@@ -926,7 +989,7 @@ const Contact = () => {
                   className="bg-gray-950/70 border border-gray-800 rounded-2xl overflow-hidden shadow-2xl shadow-red-950/30 h-96"
                 >
                   <iframe
-                    title="Alta Knots Office Location - MP Nagar, Bhopal"
+                    title="ATLA Knots Office Location - MP Nagar, Bhopal"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.058!2d77.430!3d23.199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39631f8a00000001%3A0x0!2sM.P.+Nagar+Zone+2%2C+Bhopal%2C+Madhya+Pradesh+462011!5e0!3m2!1sen!2sin!4v1738000000000!5m2!1sen!2sin"
                     width="100%"
                     height="100%"

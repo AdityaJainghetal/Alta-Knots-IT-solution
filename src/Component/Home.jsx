@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -63,7 +61,7 @@ export default function Home() {
             variants={fadeInUp}
             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6"
           >
-            ALTA KNOTS
+            ATLA KNOTS
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-red-400 to-white">
               IT SOLUTIONS
@@ -74,14 +72,16 @@ export default function Home() {
             variants={fadeInUp}
             className="text-xl md:text-2.5xl text-gray-300 max-w-4xl mx-auto mb-10 leading-relaxed"
           >
-            Making technology impactful, dependable, and easy to use — for businesses of all sizes.
+            Making technology impactful, dependable, and easy to use — for
+            businesses of all sizes.
           </motion.p>
 
           <motion.p
             variants={fadeInUp}
             className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-12"
           >
-            We build secure, future-ready software that drives efficiency and digital transformation.
+            We build secure, future-ready software that drives efficiency and
+            digital transformation.
           </motion.p>
 
           <motion.div
@@ -116,7 +116,6 @@ export default function Home() {
           </div>
           <span className="text-sm text-gray-500 tracking-widest">SCROLL</span>
         </motion.div>
-        
       </section>
 
       {/* Services Section - Updated with your content */}
@@ -139,46 +138,82 @@ export default function Home() {
             variants={fadeInUp}
             className="text-xl text-gray-400 text-center mb-16 max-w-3xl mx-auto"
           >
-            Comprehensive IT & BPO solutions — from development to support and infrastructure
+            Comprehensive IT & BPO solutions — from development to support and
+            infrastructure
           </motion.p>
 
           <div className="space-y-20">
             {/* 1. Information Technology Services */}
-            
+
             <div>
               <h3 className="text-4xl font-bold mb-8 text-red-400 text-center">
                 1. Information Technology Services
               </h3>
               <p className="text-lg text-gray-300 mb-10 text-center max-w-4xl mx-auto">
-                Our IT services support companies at every stage of the product lifecycle.
+                Our IT services support companies at every stage of the product
+                lifecycle.
               </p>
 
               <div className="grid md:grid-cols-3 gap-8">
-                <motion.div variants={scaleOnHover} initial="rest" whileHover="hover" className="bg-gray-900/60 backdrop-blur-sm border border-gray-800 rounded-2xl p-8">
+                <motion.div
+                  variants={scaleOnHover}
+                  initial="rest"
+                  whileHover="hover"
+                  className="bg-gray-900/60 backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
+                >
                   <Code className="w-12 h-12 text-red-500 mb-6 mx-auto" />
-                  <h4 className="text-2xl font-bold mb-4 text-center">Development</h4>
+                  <h4 className="text-2xl font-bold mb-4 text-center">
+                    Development
+                  </h4>
                   <ul className="text-gray-300 space-y-3">
-                    <li>• Web application development (websites, optimization, data structures)</li>
-                    <li>• Mobile application development (secure, scalable, user-friendly solutions)</li>
+                    <li>
+                      • Web application development (websites, optimization,
+                      data structures)
+                    </li>
+                    <li>
+                      • Mobile application development (secure, scalable,
+                      user-friendly solutions)
+                    </li>
                   </ul>
                 </motion.div>
 
-                <motion.div variants={scaleOnHover} initial="rest" whileHover="hover" className="bg-gray-900/60 backdrop-blur-sm border border-gray-800 rounded-2xl p-8">
+                <motion.div
+                  variants={scaleOnHover}
+                  initial="rest"
+                  whileHover="hover"
+                  className="bg-gray-900/60 backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
+                >
                   <ShieldCheck className="w-12 h-12 text-red-500 mb-6 mx-auto" />
-                  <h4 className="text-2xl font-bold mb-4 text-center">Testing / Examination</h4>
+                  <h4 className="text-2xl font-bold mb-4 text-center">
+                    Testing / Examination
+                  </h4>
                   <ul className="text-gray-300 space-y-3">
                     <li>• Web application testing</li>
                     <li>• Mobile application testing</li>
-                    <li>Guarantees quality, performance, security, and reliability before deployment</li>
+                    <li>
+                      Guarantees quality, performance, security, and reliability
+                      before deployment
+                    </li>
                   </ul>
                 </motion.div>
 
-                <motion.div variants={scaleOnHover} initial="rest" whileHover="hover" className="bg-gray-900/60 backdrop-blur-sm border border-gray-800 rounded-2xl p-8">
+                <motion.div
+                  variants={scaleOnHover}
+                  initial="rest"
+                  whileHover="hover"
+                  className="bg-gray-900/60 backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
+                >
                   <Server className="w-12 h-12 text-red-500 mb-6 mx-auto" />
-                  <h4 className="text-2xl font-bold mb-4 text-center">Product Assistance</h4>
+                  <h4 className="text-2xl font-bold mb-4 text-center">
+                    Product Assistance
+                  </h4>
                   <ul className="text-gray-300 space-y-3">
-                    <li>Continuous support & maintenance for seamless operation</li>
-                    <li>Ticket support • Incident reporting • Change management</li>
+                    <li>
+                      Continuous support & maintenance for seamless operation
+                    </li>
+                    <li>
+                      Ticket support • Incident reporting • Change management
+                    </li>
                     <li>SLA KPIs</li>
                   </ul>
                 </motion.div>
@@ -192,142 +227,171 @@ export default function Home() {
               <p className="text-lg text-gray-300 mb-10 text-center max-w-4xl mx-auto">
                 Streamline operations and enhance customer engagement.
               </p>
-<section className="py-32 px-6 text-center bg-linear-to-t from-black via-gray-950 to-black">
+              <section className="py-32 px-6 text-center bg-linear-to-t from-black via-gray-950 to-black">
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={staggerContainer}
+                  className="mt-20 max-w-7xl mx-auto"
+                >
+                  <img
+                    src="https://www.istockphoto.com/photos/software-company"
+                    alt=""
+                  />
+                  <motion.h3
+                    variants={fadeInUp}
+                    className="text-4xl md:text-5xl font-bold text-red-500 mb-12 text-center"
+                  >
+                    Inspiration Gallery
+                  </motion.h3>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={staggerContainer}
-          className="mt-20 max-w-7xl mx-auto"
-        >
-     <img src="https://www.istockphoto.com/photos/software-company" alt="" />
-          <motion.h3
-            variants={fadeInUp}
-            className="text-4xl md:text-5xl font-bold text-red-500 mb-12 text-center"
-          >
-            Inspiration Gallery
-          </motion.h3>
+                  <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={staggerContainer}
+                    className="mt-20 max-w-7xl mx-auto"
+                  >
+                    <motion.img
+                      // src="https://img.freepik.com/free-photo/group-people-working-website-template_53876-25068.jpg?semt=ais_hybrid&w=740&q=80"
+                      className="w-64"
+                      initial={{ rotate: -10 }}
+                      animate={{ rotate: 10 }}
+                      transition={{ duration: 0.8, ease: "easeInOut" }}
+                    />
 
-        <motion.div
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}
-  variants={staggerContainer}
-  className="mt-20 max-w-7xl mx-auto"
->
- <motion.img
-  // src="https://img.freepik.com/free-photo/group-people-working-website-template_53876-25068.jpg?semt=ais_hybrid&w=740&q=80"
-  className="w-64"
-  initial={{ rotate: -10 }}
-  animate={{ rotate: 10 }}
-  transition={{ duration: 0.8, ease: "easeInOut" }}
-/>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                      {/* Image 1 - Futuristic red grid - rotated */}
+                      <motion.div
+                        variants={fadeInUp}
+                        className="overflow-hidden rounded-2xl border border-gray-800 shadow-2xl"
+                        whileHover={{ scale: 1.05 }}
+                      >
+                        <div className="relative">
+                          <grok-card
+                            data-id="2fb022"
+                            data-type="image_card"
+                            data-plain-type="render_searched_image"
+                            data-arg-size="LARGE"
+                          ></grok-card>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-    {/* Image 1 - Futuristic red grid - rotated */}
-    <motion.div
-      variants={fadeInUp}
-      className="overflow-hidden rounded-2xl border border-gray-800 shadow-2xl"
-      whileHover={{ scale: 1.05 }}
-    >
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                        </div>
 
+                        <div className="p-4 bg-black/70">
+                          <p className="text-sm text-gray-400">
+                            Futuristic digital red grid
+                          </p>
+                        </div>
+                      </motion.div>
 
-      <div className="relative">
+                      {/* Image 2 - Red neon corridor */}
+                      <motion.div
+                        variants={fadeInUp}
+                        // src="https://img.freepik.com/free-photo/group-people-working-website-template_53876-25068.jpg?semt=ais_hybrid&w=740&q=80"
 
-<grok-card data-id="2fb022" data-type="image_card" data-plain-type="render_searched_image"  data-arg-size="LARGE" ></grok-card>
+                        className="overflow-hidden rounded-2xl border border-gray-800 shadow-2xl rotate-[-30deg] hover:rotate-0 transition-transform duration-500"
+                        whileHover={{ scale: 1.08 }}
+                      >
+                        <img
+                          src="https://img.freepik.com/free-photo/group-people-working-website-template_53876-25068.jpg?semt=ais_hybrid&w=740&q=80"
+                          alt=""
+                        />
+                        {/* import { motion } from "framer-motion"; */}
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-      </div>
-      
-      <div className="p-4 bg-black/70">
-        <p className="text-sm text-gray-400">Futuristic digital red grid</p>
-      </div>
-    </motion.div>
+                        <grok-card
+                          data-id="5d1f91"
+                          data-type="image_card"
+                          data-plain-type="render_searched_image"
+                          data-arg-size="LARGE"
+                        ></grok-card>
+                      </motion.div>
 
-    {/* Image 2 - Red neon corridor */}
-    <motion.div
-      variants={fadeInUp}
-        // src="https://img.freepik.com/free-photo/group-people-working-website-template_53876-25068.jpg?semt=ais_hybrid&w=740&q=80"
+                      {/* Image 3 - Red LED grid pattern */}
+                      <motion.div
+                        variants={fadeInUp}
+                        className="overflow-hidden rounded-2xl border border-gray-800 shadow-2xl rotate-[30deg] hover:rotate-0 transition-transform duration-500"
+                        whileHover={{ scale: 1.08 }}
+                      >
+                        <grok-card
+                          data-id="0f8b7c"
+                          data-type="image_card"
+                          data-plain-type="render_searched_image"
+                          data-arg-size="LARGE"
+                        ></grok-card>
+                      </motion.div>
 
-      className="overflow-hidden rounded-2xl border border-gray-800 shadow-2xl rotate-[-30deg] hover:rotate-0 transition-transform duration-500"
-      whileHover={{ scale: 1.08 }}
-    >
-      <img   src="https://img.freepik.com/free-photo/group-people-working-website-template_53876-25068.jpg?semt=ais_hybrid&w=740&q=80"
- alt="" />
-      {/* import { motion } from "framer-motion"; */}
+                      {/* Image 4 - Dark dashboard UI */}
+                      <motion.div
+                        variants={fadeInUp}
+                        className="overflow-hidden rounded-2xl border border-gray-800 shadow-2xl rotate-[-25deg] hover:rotate-0 transition-transform duration-500"
+                        whileHover={{ scale: 1.08 }}
+                      >
+                        <grok-card
+                          data-id="9f8025"
+                          data-type="image_card"
+                          data-plain-type="render_searched_image"
+                          data-arg-size="LARGE"
+                        ></grok-card>
+                      </motion.div>
 
+                      {/* Image 5 - Modern app interface dark mode */}
+                      <motion.div
+                        variants={fadeInUp}
+                        className="overflow-hidden rounded-2xl border border-gray-800 shadow-2xl rotate-[28deg] hover:rotate-0 transition-transform duration-500"
+                        whileHover={{ scale: 1.08 }}
+                      >
+                        <grok-card
+                          data-id="1ea0a6"
+                          data-type="image_card"
+                          data-plain-type="render_searched_image"
+                          data-arg-size="LARGE"
+                        ></grok-card>
+                      </motion.div>
 
+                      {/* Image 6 - Cybersecurity red neon lock */}
+                      <motion.div
+                        variants={fadeInUp}
+                        className="overflow-hidden rounded-2xl border border-gray-800 shadow-2xl rotate-[-32deg] hover:rotate-0 transition-transform duration-500"
+                        whileHover={{ scale: 1.08 }}
+                      >
+                        <grok-card
+                          data-id="bce634"
+                          data-type="image_card"
+                          data-plain-type="render_searched_image"
+                          data-arg-size="LARGE"
+                        ></grok-card>
+                      </motion.div>
+                    </div>
 
-<grok-card data-id="5d1f91" data-type="image_card" data-plain-type="render_searched_image"  data-arg-size="LARGE" ></grok-card>
-
-    </motion.div>
-
-    {/* Image 3 - Red LED grid pattern */}
-    <motion.div
-      variants={fadeInUp}
-      className="overflow-hidden rounded-2xl border border-gray-800 shadow-2xl rotate-[30deg] hover:rotate-0 transition-transform duration-500"
-      whileHover={{ scale: 1.08 }}
-    >
-      
-<grok-card data-id="0f8b7c" data-type="image_card" data-plain-type="render_searched_image"  data-arg-size="LARGE" ></grok-card>
-
-    </motion.div>
-
-    {/* Image 4 - Dark dashboard UI */}
-    <motion.div
-      variants={fadeInUp}
-      className="overflow-hidden rounded-2xl border border-gray-800 shadow-2xl rotate-[-25deg] hover:rotate-0 transition-transform duration-500"
-      whileHover={{ scale: 1.08 }}
-    >
-      
-<grok-card data-id="9f8025" data-type="image_card" data-plain-type="render_searched_image"  data-arg-size="LARGE" ></grok-card>
-
-    </motion.div>
-
-    {/* Image 5 - Modern app interface dark mode */}
-    <motion.div
-      variants={fadeInUp}
-      className="overflow-hidden rounded-2xl border border-gray-800 shadow-2xl rotate-[28deg] hover:rotate-0 transition-transform duration-500"
-      whileHover={{ scale: 1.08 }}
-    >
-      
-<grok-card data-id="1ea0a6" data-type="image_card" data-plain-type="render_searched_image"  data-arg-size="LARGE" ></grok-card>
-
-    </motion.div>
-
-    {/* Image 6 - Cybersecurity red neon lock */}
-    <motion.div
-      variants={fadeInUp}
-      className="overflow-hidden rounded-2xl border border-gray-800 shadow-2xl rotate-[-32deg] hover:rotate-0 transition-transform duration-500"
-      whileHover={{ scale: 1.08 }}
-    >
-      
-<grok-card data-id="bce634" data-type="image_card" data-plain-type="render_searched_image"  data-arg-size="LARGE" ></grok-card>
-
-    </motion.div>
-  </div>
-
-  <motion.p
-    variants={fadeInUp}
-    className="text-gray-400 mt-12 text-lg text-center"
-  >
-    Dark, modern tech & BPO inspired visuals — tilted at ~30° for dynamic feel
-  </motion.p>
-</motion.div>
-          <motion.p
-            variants={fadeInUp}
-            className="text-gray-400 mt-10 text-lg"
-          >
-            Modern tech & BPO visuals — dark, dynamic, and professional.
-          </motion.p>
-        </motion.div>
-        
-      </section>
+                    <motion.p
+                      variants={fadeInUp}
+                      className="text-gray-400 mt-12 text-lg text-center"
+                    >
+                      Dark, modern tech & BPO inspired visuals — tilted at ~30°
+                      for dynamic feel
+                    </motion.p>
+                  </motion.div>
+                  <motion.p
+                    variants={fadeInUp}
+                    className="text-gray-400 mt-10 text-lg"
+                  >
+                    Modern tech & BPO visuals — dark, dynamic, and professional.
+                  </motion.p>
+                </motion.div>
+              </section>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <motion.div variants={scaleOnHover} initial="rest" whileHover="hover" className="bg-gray-900/60 backdrop-blur-sm border border-gray-800 rounded-2xl p-8">
+                <motion.div
+                  variants={scaleOnHover}
+                  initial="rest"
+                  whileHover="hover"
+                  className="bg-gray-900/60 backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
+                >
                   <Headphones className="w-12 h-12 text-red-500 mb-6 mx-auto" />
-                  <h4 className="text-2xl font-bold mb-4 text-center">Voice, Chat & Email Support</h4>
+                  <h4 className="text-2xl font-bold mb-4 text-center">
+                    Voice, Chat & Email Support
+                  </h4>
                   <ul className="text-gray-300 space-y-2 text-sm">
                     <li>• Inbound/outbound voice support</li>
                     <li>• Real-time chat assistance</li>
@@ -335,28 +399,53 @@ export default function Home() {
                   </ul>
                 </motion.div>
 
-                <motion.div variants={scaleOnHover} initial="rest" whileHover="hover" className="bg-gray-900/60 backdrop-blur-sm border border-gray-800 rounded-2xl p-8">
+                <motion.div
+                  variants={scaleOnHover}
+                  initial="rest"
+                  whileHover="hover"
+                  className="bg-gray-900/60 backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
+                >
                   <BarChart3 className="w-12 h-12 text-red-500 mb-6 mx-auto" />
-                  <h4 className="text-2xl font-bold mb-4 text-center">Cataloguing</h4>
+                  <h4 className="text-2xl font-bold mb-4 text-center">
+                    Cataloguing
+                  </h4>
                   <ul className="text-gray-300 space-y-2 text-sm">
-                    <li>• Detailed product descriptions with tags & keywords</li>
+                    <li>
+                      • Detailed product descriptions with tags & keywords
+                    </li>
                     <li>• Data validation, error correction & enrichment</li>
                   </ul>
                 </motion.div>
 
-                <motion.div variants={scaleOnHover} initial="rest" whileHover="hover" className="bg-gray-900/60 backdrop-blur-sm border border-gray-800 rounded-2xl p-8">
+                <motion.div
+                  variants={scaleOnHover}
+                  initial="rest"
+                  whileHover="hover"
+                  className="bg-gray-900/60 backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
+                >
                   <Users className="w-12 h-12 text-red-500 mb-6 mx-auto" />
-                  <h4 className="text-2xl font-bold mb-4 text-center">Level 2 (L2) Support</h4>
+                  <h4 className="text-2xl font-bold mb-4 text-center">
+                    Level 2 (L2) Support
+                  </h4>
                   <p className="text-gray-300 text-sm">
-                    Advanced troubleshooting for escalated complex issues — in-depth diagnosis and root cause resolution.
+                    Advanced troubleshooting for escalated complex issues —
+                    in-depth diagnosis and root cause resolution.
                   </p>
                 </motion.div>
 
-                <motion.div variants={scaleOnHover} initial="rest" whileHover="hover" className="bg-gray-900/60 backdrop-blur-sm border border-gray-800 rounded-2xl p-8">
+                <motion.div
+                  variants={scaleOnHover}
+                  initial="rest"
+                  whileHover="hover"
+                  className="bg-gray-900/60 backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
+                >
                   <CheckCircle className="w-12 h-12 text-red-500 mb-6 mx-auto" />
-                  <h4 className="text-2xl font-bold mb-4 text-center">Quality Assurance & Audits</h4>
+                  <h4 className="text-2xl font-bold mb-4 text-center">
+                    Quality Assurance & Audits
+                  </h4>
                   <p className="text-gray-300 text-sm">
-                    Regular audits of interactions (calls/chats), SOP/SLA compliance, feedback, coaching, and continuous improvement.
+                    Regular audits of interactions (calls/chats), SOP/SLA
+                    compliance, feedback, coaching, and continuous improvement.
                   </p>
                 </motion.div>
               </div>
@@ -368,7 +457,11 @@ export default function Home() {
                 3. Support & Infrastructure Setup
               </h3>
               <p className="text-lg text-gray-300 max-w-4xl mx-auto">
-                End-to-end setup for efficient BPO operations: fully equipped offices, strong IT infrastructure, advanced telephony, high-speed networks, servers, workstations, data security, and power backup — ensuring reliable, secure, and scalable service delivery.
+                End-to-end setup for efficient BPO operations: fully equipped
+                offices, strong IT infrastructure, advanced telephony,
+                high-speed networks, servers, workstations, data security, and
+                power backup — ensuring reliable, secure, and scalable service
+                delivery.
               </p>
             </div>
           </div>
@@ -393,16 +486,30 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-10 lg:gap-16 text-center">
             {[
-              { icon: Users, title: "True Partnership", desc: "We become an extension of your team — understanding your business deeply." },
-              { icon: Briefcase, title: "Enterprise Expertise", desc: "Proven experience in BFSI, retail, government & PSU projects." },
-              { icon: HardDrive, title: "Long-term Support", desc: "24×7 production support, SLA-based maintenance & AMS." },
+              {
+                icon: Users,
+                title: "True Partnership",
+                desc: "We become an extension of your team — understanding your business deeply.",
+              },
+              {
+                icon: Briefcase,
+                title: "Enterprise Expertise",
+                desc: "Proven experience in BFSI, retail, government & PSU projects.",
+              },
+              {
+                icon: HardDrive,
+                title: "Long-term Support",
+                desc: "24×7 production support, SLA-based maintenance & AMS.",
+              },
             ].map((item, idx) => (
               <motion.div key={idx} variants={fadeInUp}>
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gray-900/80 mb-8 mx-auto">
                   <item.icon className="w-10 h-10 text-red-500" />
                 </div>
                 <h3 className="text-3xl font-bold mb-5">{item.title}</h3>
-                <p className="text-gray-400 leading-relaxed max-w-xs mx-auto">{item.desc}</p>
+                <p className="text-gray-400 leading-relaxed max-w-xs mx-auto">
+                  {item.desc}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -410,12 +517,9 @@ export default function Home() {
       </section>
 
       {/* Final CTA + Inspiration Gallery */}
-      
     </div>
   );
 }
-
-
 
 // import React from "react";
 // import { motion } from "framer-motion";
@@ -473,7 +577,7 @@ export default function Home() {
 //             variants={fadeInUp}
 //             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6"
 //           >
-//             ALTA KNOTS
+//             ATLA KNOTS
 //             <br />
 //             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-red-400 to-white">
 //               IT SOLUTIONS

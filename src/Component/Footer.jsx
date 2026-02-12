@@ -21,7 +21,7 @@
 //           {/* Column 1: Brand & Description */}
 //           <div>
 //             <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-500 bg-clip-text text-transparent mb-4">
-//               Alta Knots
+//               ATLA Knots
 //             </h3>
 //             <p className="text-gray-400 mb-6 leading-relaxed">
 //               Modern IT services and software development company dedicated to
@@ -167,7 +167,7 @@
 //               </li>
 //               <li className="flex items-center">
 //                 <Mail size={18} className="mr-3 text-cyan-400" />
-//                 <span>contact@altaknots.com</span>
+//                 <span>contact@ATLAknots.com</span>
 //               </li>
 //             </ul>
 //           </div>
@@ -176,7 +176,7 @@
 //         {/* Bottom Bar */}
 //         <div className="border-t border-gray-800 py-6 text-center md:flex md:justify-between md:items-center">
 //           <p className="text-sm">
-//             © {currentYear} Alta Knots IT Solution. All rights reserved.
+//             © {currentYear} ATLA Knots IT Solution. All rights reserved.
 //           </p>
 //           <div className="mt-4 md:mt-0 flex flex-wrap justify-center gap-6 text-sm">
 //             <a href="#" className="hover:text-cyan-400 transition-colors">
@@ -196,7 +196,6 @@
 // };
 
 // export default Footer;
-
 
 // src/components/Footer.jsx
 import React from "react";
@@ -221,7 +220,7 @@ const Footer = () => {
           {/* Column 1: Brand & Description */}
           <div>
             <h3 className="text-2xl font-bold bg-gradient-to-r from-red-500 via-red-400 to-rose-500 bg-clip-text text-transparent mb-4">
-              Alta Knots
+              ATLA Knots
             </h3>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Modern IT services and software development company dedicated to
@@ -268,22 +267,34 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-red-500 transition-colors">
+                <a
+                  href="#about"
+                  className="hover:text-red-500 transition-colors"
+                >
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-red-500 transition-colors">
+                <a
+                  href="#services"
+                  className="hover:text-red-500 transition-colors"
+                >
                   Services
                 </a>
               </li>
               <li>
-                <a href="#projects" className="hover:text-red-500 transition-colors">
+                <a
+                  href="#projects"
+                  className="hover:text-red-500 transition-colors"
+                >
                   Projects
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-red-500 transition-colors">
+                <a
+                  href="#contact"
+                  className="hover:text-red-500 transition-colors"
+                >
                   Contact
                 </a>
               </li>
@@ -297,12 +308,18 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="#web-dev" className="hover:text-red-500 transition-colors">
+                <a
+                  href="#web-dev"
+                  className="hover:text-red-500 transition-colors"
+                >
                   Web & App Development
                 </a>
               </li>
               <li>
-                <a href="#testing" className="hover:text-red-500 transition-colors">
+                <a
+                  href="#testing"
+                  className="hover:text-red-500 transition-colors"
+                >
                   Testing & QA
                 </a>
               </li>
@@ -312,12 +329,18 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#consulting" className="hover:text-red-500 transition-colors">
+                <a
+                  href="#consulting"
+                  className="hover:text-red-500 transition-colors"
+                >
                   IT Consulting
                 </a>
               </li>
               <li>
-                <a href="#gov-projects" className="hover:text-red-500 transition-colors">
+                <a
+                  href="#gov-projects"
+                  className="hover:text-red-500 transition-colors"
+                >
                   Government Projects
                 </a>
               </li>
@@ -340,7 +363,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Mail size={18} className="mr-3 text-red-500" />
-                <span>contact@altaknots.com</span>
+                <span>contact@ATLAknots.com</span>
               </li>
             </ul>
           </div>
@@ -349,7 +372,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-red-900/20 py-6 text-center md:flex md:justify-between md:items-center">
           <p className="text-sm text-gray-400">
-            © {currentYear} Alta Knots IT Solution. All rights reserved.
+            © {currentYear} ATLA Knots IT Solution. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0 flex flex-wrap justify-center gap-6 text-sm">
             <a href="#" className="hover:text-red-500 transition-colors">

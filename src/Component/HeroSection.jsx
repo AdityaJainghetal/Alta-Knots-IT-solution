@@ -190,7 +190,7 @@ const OrbitingCubes = () => {
           metalness={0.8}
           roughness={0.2}
         />
-      </Box>
+      </Box>,
     );
   }
 
@@ -252,7 +252,7 @@ const DNAHelix = () => {
           metalness={0.9}
           roughness={0.1}
         />
-      </Sphere>
+      </Sphere>,
     );
   }
 
@@ -374,7 +374,7 @@ const HeroSection = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tight mb-6"
           >
-            <span className="block text-white">ALTA KNOTS</span>
+            <span className="block text-white">ATLA KNOTS</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-red-500 to-red-600 animate-gradient">
               TECH EXCELLENCE
             </span>
@@ -425,7 +425,10 @@ const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
             <motion.button
-              whileHover={{ scale: 1.08, boxShadow: "0 20px 60px rgba(220, 38, 38, 0.5)" }}
+              whileHover={{
+                scale: 1.08,
+                boxShadow: "0 20px 60px rgba(220, 38, 38, 0.5)",
+              }}
               whileTap={{ scale: 0.95 }}
               className="group px-10 py-5 bg-gradient-to-r from-red-600 to-red-800 rounded-full text-xl font-bold shadow-2xl shadow-red-900/50 transition-all duration-300 flex items-center gap-3"
             >

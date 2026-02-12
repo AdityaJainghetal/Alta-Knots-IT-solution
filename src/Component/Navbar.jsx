@@ -1,10 +1,8 @@
-
-
 // // // src/components/Navbar.jsx
 // // import React, { useState } from "react";
 // // import { NavLink } from "react-router-dom";
 // // import { Menu, X } from "lucide-react";
-// // import ALTAknots from  "./Mobile/img/ALTAKnots.png"; // Ensure this path is correct based on your project structure
+// // import ATLAknots from  "./Mobile/img/ATLAKnots.png"; // Ensure this path is correct based on your project structure
 
 // // const navItems = [
 // //   { name: "Home", path: "/" },
@@ -30,9 +28,9 @@
 // //             <NavLink
 // //               to="/"
 // //               className="text-2xl md:text-3xl font-extrabold tracking-tight bg-linear-to-r from-white to-white bg-clip-text text-transparent hover:from-red-400 hover:via-white hover:to-red-400 transition-all duration-500"
-// //             > 
+// //             >
 // //               <div className="flex items-center gap-2">
-// //               <img src={ALTAknots} alt="ALTAKnots Logo" className="h-10 w-10 md:h-18 pt-5 md:w-50 " />
+// //               <img src={ATLAknots} alt="ATLAKnots Logo" className="h-10 w-10 md:h-18 pt-5 md:w-50 " />
 // //             </div>
 // //             </NavLink>
 // //             {/* Optional small tagline - remove if not needed */}
@@ -115,12 +113,10 @@
 // // export default Navbar;
 // // src/components/Navbar.jsx
 
-
-
 // // import React, { useState } from "react";
 // // import { NavLink } from "react-router-dom";
 // // import { Menu, X, ChevronDown } from "lucide-react";
-// // import ALTAknots from "./Mobile/img/ALTAKnots.png"; // Adjust path if needed
+// // import ATLAknots from "./Mobile/img/ATLAKnots.png"; // Adjust path if needed
 
 // // const navItems = [
 // //   { name: "Home", path: "/" },
@@ -160,14 +156,14 @@
 // //           <div className="flex-shrink-0">
 // //             <NavLink to="/" className="flex items-center gap-2.5">
 // //              <img
-// //   src={ALTAknots}
-// //   alt="ALTAKnots Logo"
+// //   src={ATLAknots}
+// //   alt="ATLAKnots Logo"
 // //   className="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 object-contain"
 // // />
 
 // //               {/* Optional: If you want text logo beside image */}
 // //               {/* <span className="text-xl md:text-2xl font-bold text-white tracking-tight">
-// //                 ALTAKnots
+// //                 ATLAKnots
 // //               </span> */}
 // //             </NavLink>
 // //           </div>
@@ -336,11 +332,10 @@
 
 // // export default Navbar;
 
-
 // import React, { useState } from "react";
 // import { NavLink } from "react-router-dom";
 // import { Menu, X, ChevronDown } from "lucide-react";
-// import ALTAknots from "./Mobile/img/ALTAKnots.png"; // Adjust path if needed
+// import ATLAknots from "./Mobile/img/ATLAKnots.png"; // Adjust path if needed
 
 // const navItems = [
 //   { name: "Home", path: "/" },
@@ -384,12 +379,12 @@
 //           <div className="flex-shrink-0">
 //             <NavLink to="/" className="flex items-center gap-2.5">
 //               <img
-//                 src={ALTAknots}
-//                 alt="ALTAKnots Logo"
+//                 src={ATLAknots}
+//                 alt="ATLAKnots Logo"
 //                 className="h-14 w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 object-contain"
 //               />
 //               {/* Uncomment if you want text logo */}
-//               {/* <span className="text-xl md:text-2xl font-bold text-white tracking-tight">ALTAKnots</span> */}
+//               {/* <span className="text-xl md:text-2xl font-bold text-white tracking-tight">ATLAKnots</span> */}
 //             </NavLink>
 //           </div>
 
@@ -563,7 +558,7 @@
 // import React, { useState } from "react";
 // import { NavLink } from "react-router-dom";
 // import { Menu, X, ChevronDown } from "lucide-react";
-// import ALTAknots from "./Mobile/img/ALTAKnots.png"; // Adjust path if needed
+// import ATLAknots from "./Mobile/img/ATLAKnots.png"; // Adjust path if needed
 
 // const navItems = [
 //   { name: "Home", path: "/" },
@@ -605,8 +600,8 @@
 //           <div className="flex-shrink-0">
 //             <NavLink to="/" className="flex items-center gap-2.5">
 //               <img
-//                 src={ALTAknots}
-//                 alt="ALTAKnots Logo"
+//                 src={ATLAknots}
+//                 alt="ATLAKnots Logo"
 //                 className="h-14 w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 object-contain"
 //               />
 //             </NavLink>
@@ -635,14 +630,14 @@
 //                   {/* Desktop Dropdown – Improved look */}
 //                   <div
 //                     className={`
-//                       absolute left-0 top-full mt-2 w-60 
-//                       bg-gradient-to-b from-gray-950/95 to-black/95 
-//                       backdrop-blur-xl 
-//                       border border-gray-800/70 rounded-xl 
-//                       shadow-2xl shadow-black/60 
-//                       py-3 opacity-0 invisible translate-y-3 scale-95 
-//                       group-hover:opacity-100 group-hover:visible 
-//                       group-hover:translate-y-0 group-hover:scale-100 
+//                       absolute left-0 top-full mt-2 w-60
+//                       bg-gradient-to-b from-gray-950/95 to-black/95
+//                       backdrop-blur-xl
+//                       border border-gray-800/70 rounded-xl
+//                       shadow-2xl shadow-black/60
+//                       py-3 opacity-0 invisible translate-y-3 scale-95
+//                       group-hover:opacity-100 group-hover:visible
+//                       group-hover:translate-y-0 group-hover:scale-100
 //                       transition-all duration-200 ease-out z-50
 //                     `}
 //                   >
@@ -785,11 +780,10 @@
 
 // export default Navbar;
 
-
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
-import ALTAknots from "./Mobile/img/ALTAKnots.png"; // Adjust path if needed
+import ATLAknots from "./Mobile/img/ALTAKnots.png"; // Adjust path if needed
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -831,8 +825,8 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <NavLink to="/" className="flex items-center gap-2.5">
               <img
-                src={ALTAknots}
-                alt="ALTAKnots Logo"
+                src={ATLAknots}
+                alt="ATLAKnots Logo"
                 className="h-14 w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 object-contain"
               />
             </NavLink>
@@ -847,7 +841,8 @@ const Navbar = () => {
                     to={item.path}
                     className={({ isActive }) =>
                       `flex items-center gap-1.5 px-4 py-2.5 text-sm lg:text-base font-medium rounded-lg transition-all duration-300 ${
-                        isActive || window.location.pathname.startsWith(item.path)
+                        isActive ||
+                        window.location.pathname.startsWith(item.path)
                           ? "bg-red-950/50 text-red-400 border border-red-800/60 shadow-sm"
                           : "text-gray-200 hover:text-red-400 hover:bg-red-950/30 border border-transparent hover:border-red-800/50"
                       }`
@@ -907,7 +902,7 @@ const Navbar = () => {
                 >
                   {item.name}
                 </NavLink>
-              )
+              ),
             )}
           </div>
 
@@ -941,7 +936,8 @@ const Navbar = () => {
                     onClick={closeMenu}
                     className={({ isActive }) =>
                       `flex-1 px-4 py-3.5 rounded-lg text-base font-medium transition-all ${
-                        isActive || window.location.pathname.startsWith(item.path)
+                        isActive ||
+                        window.location.pathname.startsWith(item.path)
                           ? "bg-red-950/50 text-red-400 border-l-4 border-red-600"
                           : "text-gray-200 hover:text-red-400 hover:bg-red-950/30 border-l-4 border-transparent"
                       }`
@@ -969,7 +965,9 @@ const Navbar = () => {
                 {/* Mobile Dropdown */}
                 <div
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    openDropdown === item.name ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                    openDropdown === item.name
+                      ? "max-h-96 opacity-100"
+                      : "max-h-0 opacity-0"
                   }`}
                 >
                   <div className="pl-6 pt-1 pb-2 space-y-1 bg-black/40 rounded-b-lg">
@@ -1007,7 +1005,7 @@ const Navbar = () => {
               >
                 {item.name}
               </NavLink>
-            )
+            ),
           )}
 
           {/* Auth Buttons */}
