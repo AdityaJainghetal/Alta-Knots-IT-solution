@@ -827,7 +827,7 @@ const Navbar = () => {
               <img
                 src={ATLAknots}
                 alt="ATLAKnots Logo"
-                className="h-14 w-14 md:h-16 md:w-16 lg:h-20 lg:w-20 object-contain"
+                className="h-14 w-30 md:h-16 md:w-36 lg:h-20 lg:w-50 object-contain"
               />
             </NavLink>
           </div>
