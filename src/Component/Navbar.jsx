@@ -783,7 +783,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
-import ATLAknots from "./Mobile/img/ALTAKnots.png"; // Adjust path if needed
+import ATLAknots from "./Mobile/img/Atlaimage2.jpg"; // Adjust path if needed
 
 const navItems = [
   { name: "Home", path: "/" },
