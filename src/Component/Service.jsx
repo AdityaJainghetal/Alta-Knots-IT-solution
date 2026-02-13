@@ -1642,7 +1642,7 @@ const Service = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-black text-gray-100 overflow-hidden scrollbar-hide">
+    <div className="relative min-h-screen bg-black text-gray-100 overflow-hidden scrollbar-hide ">
       {/* Custom scrollbar hide styles */}
       <style jsx>{`
         .scrollbar-hide {
@@ -1694,7 +1694,7 @@ const Service = () => {
         >
           <motion.h1
             variants={fadeInUp}
-            className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight"
+            className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight pt-30"
           >
             <span className="bg-gradient-to-r from-red-500 via-rose-500 to-red-400 bg-clip-text text-transparent">
               Our Services
@@ -1744,7 +1744,7 @@ const Service = () => {
             </motion.div>
 
             {/* Content */}
-            <div className="w-full lg:w-1/2 space-y-10">
+            <div className="w-full lg:w-1/2 space-y-10 pt-80">
               <motion.h2
                 variants={fadeInUp}
                 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-red-400 to-rose-500 bg-clip-text text-transparent"

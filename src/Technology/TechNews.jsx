@@ -303,7 +303,7 @@
 //         setError(null);
 
 //         // Assuming your backend has: GET /tech → returns array of news/tech items
-//         const response = await fetch('https://atla-knots-solution-admin.onrender.com/tech', {
+//         const response = await fetch('https://atla-knots-solution-admin-1.onrender.com/tech', {
 //           method: 'GET',
 //           headers: {
 //             'Content-Type': 'application/json',
@@ -492,7 +492,7 @@
 //         setLoading(true);
 //         setError(null);
 
-//         const response = await fetch('https://atla-knots-solution-admin.onrender.com/tech', {
+//         const response = await fetch('https://atla-knots-solution-admin-1.onrender.com/tech', {
 //           method: 'GET',
 //           headers: {
 //             'Content-Type': 'application/json',
@@ -707,7 +707,7 @@ const TechNews = () => {
         setError(null);
 
         const response = await fetch(
-          "https://atla-knots-solution-admin.onrender.com/tech",
+          "https://atla-knots-solution-admin-1.onrender.com/tech",
           {
             method: "GET",
             headers: {

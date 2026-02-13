@@ -31,7 +31,7 @@ import {
 } from "@react-three/drei";
 import * as THREE from "three";
 import MobileOnboarding from "./Mobile/Mobilebraing";
-import img4 from "../Component/Mobile/img/sevenpart3.png";
+import img4 from "../Component/Mobile/img/Atlaimage.jpg";
 import img5 from "../Component/Mobile/img/image11.png";
 
 // ────────────────────────────────────────────────
@@ -400,7 +400,7 @@ const About = () => {
           initial="hidden"
           animate="visible"
           variants={staggerContainer}
-          className="relative z-10 w-full max-w-7xl mx-auto text-center"
+          className="relative z-10 w-full max-w-80xl mx-auto text-center "
         >
           <motion.div variants={fadeInUp} className="mb-10 pt-25">
             <h1 className="text-6xl sm:text-10xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-4">
@@ -453,16 +453,14 @@ const About = () => {
     </div>
 
     {/* Image - right side */}
-    <div className="w-full md:w-7/12 lg:w-8/12 xl:w-7/12 
-      bg-black flex items-center justify-center 
-      order-1 md:order-2">
-      
-      <img
-        src={img4}
-        alt="Tech Collaboration"
-        className="w-full h-full max-h-[680px] object-contain shadow-2xl"
-      />
-    </div>
+ <div className="w-full bg-black flex order-1 md:order-5 justify-end">
+  <img
+    src={img4}
+    alt="Tech Collaboration"
+    className="w-full md:w-[100%] h-full object-cover"
+  />
+</div>
+
   </div>
 
 
