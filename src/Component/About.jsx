@@ -33,6 +33,7 @@ import * as THREE from "three";
 import MobileOnboarding from "./Mobile/Mobilebraing";
 import img4 from "../Component/Mobile/img/Atlaimage.jpg";
 import img5 from "../Component/Mobile/img/image11.png";
+import { Link } from "react-router-dom";
 
 // ────────────────────────────────────────────────
 // ANIMATED COUNTER COMPONENT
@@ -483,10 +484,6 @@ const About = () => {
         With cutting-edge technology and a client-first approach, we transform businesses through seamless digital solutions.
         Experience the power of innovation with ATLA Knots.
       </p>
-
-      <button className="px-8 py-4 bg-red-600 hover:bg-red-700 rounded-full font-semibold transition duration-300 w-fit">
-        Learn More
-      </button>
     </div>
 
     {/* Image - left side */}
@@ -512,9 +509,18 @@ const About = () => {
             <button className="px-12 py-6 bg-gradient-to-r from-red-600 to-red-800 rounded-full text-xl font-bold shadow-lg shadow-red-900/50 hover:shadow-red-900/70 transition">
               Start Building Your Future <ArrowRight className="inline ml-2" />
             </button>
-            <button className="px-10 py-6 border-2 border-red-600/60 rounded-full text-red-400 hover:bg-red-950/40 transition">
+            {/* <button className="px-10 py-6 border-2 border-red-600/60 rounded-full text-red-400 hover:bg-red-950/40 transition">
               See Our Solutions <ArrowRight className="inline ml-2" />
-            </button>
+            </button> */}
+
+            <Link href="/recent">
+  <button 
+    className="px-10 py-6 border-2 border-red-600/60 rounded-full text-red-400 hover:bg-red-950/40 transition flex items-center justify-center gap-3 font-medium"
+  >
+    See Our Solutions
+    <ArrowRight className="w-5 h-5" />
+  </button>
+</Link>
           </motion.div>
         </motion.div>
       </section>

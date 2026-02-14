@@ -783,7 +783,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
-import ATLAknots from "./Mobile/img/Atlaimage2.jpg"; // Adjust path if needed
+import ATLAknots from "./Mobile/img/ITLogo.png"; // Adjust path if needed
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -796,11 +796,17 @@ const navItems = [
       // Add more items here if needed
     ],
   },
-  { name: "Service", path: "/service" },
+  { name: "Service", path: "/service" ,hasDropdown: true, dropdownItems: [
+    { name: "Documentation", path: "/resources/documentation" },
+    { name: "API Reference", path: "/resources/api" },
+    { name: "Community Forum", path: "/resources/forum" },
+  ]},
   // { name: "Pricing", path: "/pricing" },
+  {name: "Careers", path: "/careers" },
   { name: "Technology", path: "/technology" },
   { name: "Tech News", path: "/technews" },
   { name: "Contact", path: "/contact" },
+
 ];
 
 const Navbar = () => {
@@ -827,7 +833,7 @@ const Navbar = () => {
               <img
                 src={ATLAknots}
                 alt="ATLAKnots Logo"
-                className="h-14 w-30 md:h-16 md:w-36 lg:h-20 lg:w-50 object-contain"
+                className="h-24 w-120 md:h-16 md:w-46 lg:h-40 mt-5  lg:w-50 object-contain"
               />
             </NavLink>
           </div>
