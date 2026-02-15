@@ -1,5 +1,7 @@
 
+
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import {
   Code2,
   Search,
@@ -41,68 +43,44 @@ const Technology = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch categories on component mount
+  // Fetch categories
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch(
+        const { data: result } = await axios.get(
           "https://atla-knots-solution-admin-1.onrender.com/api/technology/category",
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          },
+          { timeout: 10000 }
         );
 
-        if (!response.ok) {
-          throw new Error(`Failed to fetch categories: ${response.status}`);
-        }
-
-        const result = await response.json();
         const categoryData = result.data || [];
-
         setCategories(Array.isArray(categoryData) ? categoryData : []);
       } catch (err) {
         console.error("Error fetching categories:", err);
-        setError("Failed to load categories.");
+        setError(
+          err.response?.data?.message || err.message || "Failed to load categories."
+        );
       }
     };
 
     fetchCategories();
   }, []);
 
-  // Fetch products when a category is selected
+  // Fetch products when category changes
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
         setError(null);
 
-        // Build URL based on selected category
-        let url =
-          "https://atla-knots-solution-admin-1.onrender.com/api/technology/product";
+        let url = "https://atla-knots-solution-admin-1.onrender.com/api/technology/product";
         if (selectedCategory !== "All" && selectedCategory?._id) {
           url += `?categoryId=${selectedCategory._id}`;
         }
 
-        const response = await fetch(url, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        const { data: result } = await axios.get(url, { timeout: 12000 });
 
-        if (!response.ok) {
-          throw new Error(`Failed to fetch products: ${response.status}`);
-        }
-
-        const result = await response.json();
         let items = result.data || [];
-
-        if (!Array.isArray(items)) {
-          items = [];
-        }
+        if (!Array.isArray(items)) items = [];
 
         const formattedData = items.map((item, index) => ({
           id: item._id || `item-${index + 1}`,
@@ -110,14 +88,11 @@ const Technology = () => {
           description: item.description || "No description available",
           date:
             item.updatedAt || item.createdAt
-              ? new Date(item.updatedAt || item.createdAt).toLocaleDateString(
-                  "en-US",
-                  {
-                    month: "short",
-                    day: "numeric",
-                    year: "numeric",
-                  },
-                )
+              ? new Date(item.updatedAt || item.createdAt).toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                  year: "numeric",
+                })
               : new Date().toLocaleDateString("en-US", {
                   month: "short",
                   day: "numeric",
@@ -125,7 +100,7 @@ const Technology = () => {
                 }),
           category: item.category?.name || "General",
           link: item.link || item.url || "#",
-          image: item.images && item.images.length > 0 ? item.images[0] : null,
+          image: item.images?.length > 0 ? item.images[0] : null,
           readTime: "5 min read",
           views: `${Math.floor(Math.random() * 20)}k`,
           author: "Tech Team",
@@ -135,7 +110,11 @@ const Technology = () => {
         setNewsItems(formattedData);
       } catch (err) {
         console.error("Error fetching products:", err);
-        setError("Failed to load products. Please try again later.");
+        setError(
+          err.response?.data?.message ||
+            err.message ||
+            "Failed to load products. Please try again later."
+        );
       } finally {
         setLoading(false);
       }
@@ -144,40 +123,28 @@ const Technology = () => {
     fetchProducts();
   }, [selectedCategory]);
 
+  // Scroll tracking
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Icon based on category
   const getIconForCategory = (category) => {
     const cat = (category || "").toLowerCase();
-    if (cat.includes("ai") || cat.includes("artificial intelligence")) {
-      return <Cpu className="w-5 h-5" />;
-    }
-    if (cat.includes("hardware")) {
-      return <Zap className="w-5 h-5" />;
-    }
-    if (cat.includes("company") || cat.includes("update")) {
-      return <Building2 className="w-5 h-5" />;
-    }
-    if (cat.includes("industry") || cat.includes("news")) {
-      return <Newspaper className="w-5 h-5" />;
-    }
-    if (cat.includes("software") || cat.includes("developer")) {
-      return <Code2 className="w-5 h-5" />;
-    }
+    if (cat.includes("ai") || cat.includes("artificial intelligence")) return <Cpu className="w-5 h-5" />;
+    if (cat.includes("hardware")) return <Zap className="w-5 h-5" />;
+    if (cat.includes("company") || cat.includes("update")) return <Building2 className="w-5 h-5" />;
+    if (cat.includes("industry") || cat.includes("news")) return <Newspaper className="w-5 h-5" />;
+    if (cat.includes("software") || cat.includes("developer")) return <Code2 className="w-5 h-5" />;
     return <Globe className="w-5 h-5" />;
   };
 
   return (
     <div className="bg-black min-h-screen overflow-x-hidden">
-      {/* Hero Section - Premium Red & Black with Animated Images */}
+      {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-black via-red-950 to-black text-white py-32 md:py-40 overflow-hidden">
-        {/* Animated 3D Background Images */}
         <div className="absolute inset-0 opacity-30">
-          {/* Image 1 - Floating Tech */}
           <div
             className="absolute top-20 left-10 w-64 h-64 rounded-2xl overflow-hidden transform hover:scale-110 transition-transform duration-700 animate-float"
             style={{
@@ -193,7 +160,6 @@ const Technology = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-red-600/40 to-black/60 mix-blend-multiply"></div>
           </div>
 
-          {/* Image 2 - Coding Scene */}
           <div
             className="absolute top-40 right-20 w-72 h-72 rounded-2xl overflow-hidden transform hover:scale-110 transition-transform duration-700 animate-float-delayed"
             style={{
@@ -209,7 +175,6 @@ const Technology = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-red-700/40 to-black/60 mix-blend-multiply"></div>
           </div>
 
-          {/* Image 3 - Data Analytics */}
           <div
             className="absolute bottom-32 left-1/3 w-80 h-80 rounded-2xl overflow-hidden transform hover:scale-110 transition-transform duration-700 animate-float"
             style={{
@@ -226,66 +191,35 @@ const Technology = () => {
           </div>
         </div>
 
-        {/* Animated Particles */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-2 h-2 bg-red-500 rounded-full animate-ping"></div>
-          <div
-            className="absolute top-40 right-40 w-3 h-3 bg-red-400 rounded-full animate-pulse"
-            style={{ animationDelay: "0.5s" }}
-          ></div>
-          <div
-            className="absolute bottom-40 left-1/4 w-2 h-2 bg-red-600 rounded-full animate-ping"
-            style={{ animationDelay: "1s" }}
-          ></div>
-          <div
-            className="absolute top-60 right-1/3 w-3 h-3 bg-red-300 rounded-full animate-pulse"
-            style={{ animationDelay: "1.5s" }}
-          ></div>
+          <div className="absolute top-40 right-40 w-3 h-3 bg-red-400 rounded-full animate-pulse" style={{ animationDelay: "0.5s" }}></div>
+          <div className="absolute bottom-40 left-1/4 w-2 h-2 bg-red-600 rounded-full animate-ping" style={{ animationDelay: "1s" }}></div>
+          <div className="absolute top-60 right-1/3 w-3 h-3 bg-red-300 rounded-full animate-pulse" style={{ animationDelay: "1.5s" }}></div>
         </div>
 
-        {/* Animated Background Glow */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-20 w-72 h-72 bg-red-600 rounded-full blur-3xl animate-pulse"></div>
-          <div
-            className="absolute bottom-20 right-20 w-96 h-96 bg-red-800 rounded-full blur-3xl animate-pulse"
-            style={{ animationDelay: "1s" }}
-          ></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-red-800 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
         </div>
 
-        {/* Grid Pattern Overlay */}
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px)",
-            backgroundSize: "50px 50px",
-          }}
-        ></div>
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px)", backgroundSize: "50px 50px" }}></div>
 
         <div className="container mx-auto px-6 lg:px-8 relative z-10 text-center">
           <div className="inline-flex items-center gap-2 mb-6 px-6 py-2 bg-red-600/20 border border-red-500/30 rounded-full backdrop-blur-sm animate-fade-in">
             <Sparkles className="w-4 h-4 text-red-400 animate-pulse" />
-            <span className="text-red-400 font-semibold text-sm tracking-wider">
-              TECHNOLOGY EXCELLENCE
-            </span>
+            <span className="text-red-400 font-semibold text-sm tracking-wider">TECHNOLOGY EXCELLENCE</span>
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-8 tracking-tight animate-slide-up bg-gradient-to-r from-white via-red-100 to-white bg-clip-text text-transparent">
             Cutting-Edge Technology Solutions
           </h1>
 
-          <p
-            className="text-lg md:text-xl max-w-3xl mx-auto mb-12 text-gray-300 leading-relaxed animate-slide-up"
-            style={{ animationDelay: "0.2s" }}
-          >
-            We craft high-performance, scalable, and secure digital products
-            that drive real business growth with precision and innovation.
+          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-12 text-gray-300 leading-relaxed animate-slide-up" style={{ animationDelay: "0.2s" }}>
+            We craft high-performance, scalable, and secure digital products that drive real business growth with precision and innovation.
           </p>
 
-          <div
-            className="flex flex-wrap justify-center gap-6 animate-slide-up"
-            style={{ animationDelay: "0.4s" }}
-          >
+          <div className="flex flex-wrap justify-center gap-6 animate-slide-up" style={{ animationDelay: "0.4s" }}>
             <button className="group relative bg-gradient-to-r from-red-600 to-red-700 text-white font-bold px-10 py-5 rounded-lg shadow-2xl shadow-red-600/30 hover:shadow-red-600/50 transform hover:scale-105 transition-all duration-300 overflow-hidden">
               <span className="relative z-10 flex items-center gap-2">
                 Explore Services
@@ -304,39 +238,22 @@ const Technology = () => {
         </div>
       </section>
 
-      {/* Services Section - Animated Cards */}
+      {/* Services Section */}
       <section className="py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
-        {/* Floating Tech Images in Background */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 right-10 w-48 h-48 rounded-xl overflow-hidden animate-float-slow">
-            <img
-              src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=300&h=300&fit=crop"
-              alt="Tech"
-              className="w-full h-full object-cover"
-            />
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=300&h=300&fit=crop" alt="Tech" className="w-full h-full object-cover" />
           </div>
-          <div
-            className="absolute bottom-20 left-10 w-56 h-56 rounded-xl overflow-hidden animate-float-slow"
-            style={{ animationDelay: "1s" }}
-          >
-            <img
-              src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=300&h=300&fit=crop"
-              alt="Development"
-              className="w-full h-full object-cover"
-            />
+          <div className="absolute bottom-20 left-10 w-56 h-56 rounded-xl overflow-hidden animate-float-slow" style={{ animationDelay: "1s" }}>
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=300&h=300&fit=crop" alt="Development" className="w-full h-full object-cover" />
           </div>
         </div>
 
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">
-              Our Core Services
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">Our Core Services</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-800 mx-auto mb-6 animate-scale-x"></div>
-            <p
-              className="text-gray-400 text-lg max-w-2xl mx-auto animate-fade-in-up"
-              style={{ animationDelay: "0.2s" }}
-            >
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               From ideation to 24/7 support — we deliver end-to-end excellence.
             </p>
           </div>
@@ -364,7 +281,6 @@ const Technology = () => {
                   { text: "Security testing", icon: Shield },
                 ],
               },
-
               {
                 title: "Digital Marketing & E-commerce Solutions",
                 icon: ShoppingCart,
@@ -404,21 +320,14 @@ const Technology = () => {
                   className="group relative bg-gradient-to-b from-gray-900 to-black rounded-2xl p-8 border border-gray-800 hover:border-red-600/50 transition-all duration-500 hover:-translate-y-2 animate-slide-up overflow-hidden"
                   style={{ animationDelay: `${idx * 150}ms` }}
                 >
-                  {/* Hover Glow Effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-red-600/0 via-red-600/5 to-red-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                  {/* Animated Corner Accent */}
                   <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-red-600/20 to-transparent rounded-bl-full transform scale-0 group-hover:scale-100 transition-transform duration-500"></div>
 
                   <div className="relative z-10">
                     <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg shadow-red-600/30">
                       <ServiceIcon className="w-8 h-8 text-white" />
                     </div>
-
-                    <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-red-400 transition-colors duration-300">
-                      {service.title}
-                    </h3>
-
+                    <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-red-400 transition-colors duration-300">{service.title}</h3>
                     <ul className="space-y-4">
                       {service.items.map((item, itemIdx) => {
                         const ItemIcon = item.icon || CheckCircle2;
@@ -426,16 +335,10 @@ const Technology = () => {
                           <li
                             key={item.text}
                             className="flex items-start gap-3 text-gray-300 transform transition-all duration-300 hover:translate-x-2"
-                            style={{
-                              opacity: 0,
-                              animation: "slideInLeft 0.5s ease forwards",
-                              animationDelay: `${idx * 150 + itemIdx * 100}ms`,
-                            }}
+                            style={{ opacity: 0, animation: "slideInLeft 0.5s ease forwards", animationDelay: `${idx * 150 + itemIdx * 100}ms` }}
                           >
                             <ItemIcon className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                            <span className="group-hover:text-white transition-colors duration-300">
-                              {item.text}
-                            </span>
+                            <span className="group-hover:text-white transition-colors duration-300">{item.text}</span>
                           </li>
                         );
                       })}
@@ -448,48 +351,28 @@ const Technology = () => {
         </div>
       </section>
 
-      {/* Tech News Section - DYNAMIC */}
+      {/* Tech News Section */}
       <section className="py-24 bg-black relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-red-600 to-transparent"></div>
 
-        {/* Background Animated Pattern */}
         <div className="absolute inset-0 opacity-5">
-          <img
-            src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1200&h=800&fit=crop"
-            alt="News Background"
-            className="w-full h-full object-cover"
-          />
+          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1200&h=800&fit=crop" alt="News Background" className="w-full h-full object-cover" />
         </div>
 
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
-          {/* Section Header */}
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 mb-4 px-6 py-2 bg-red-600/20 border border-red-500/30 rounded-full backdrop-blur-sm animate-fade-in">
               <Newspaper className="w-4 h-4 text-red-400 animate-pulse" />
-              <span className="text-red-400 font-semibold text-sm tracking-wider">
-                LATEST UPDATES
-              </span>
+              <span className="text-red-400 font-semibold text-sm tracking-wider">LATEST UPDATES</span>
             </div>
-
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">
-              Tech News & Insights
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">Tech News & Insights</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-800 mx-auto mb-6 animate-scale-x"></div>
-            <p
-              className="text-gray-400 text-lg max-w-2xl mx-auto animate-fade-in-up"
-              style={{ animationDelay: "0.2s" }}
-            >
-              Stay updated with the latest technology trends and industry
-              insights
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+              Stay updated with the latest technology trends and industry insights
             </p>
           </div>
 
-          {/* Category Filter - DYNAMIC */}
-          <div
-            className="flex flex-wrap justify-center gap-3 mb-12 animate-fade-in-up"
-            style={{ animationDelay: "0.3s" }}
-          >
-            {/* All Button */}
+          <div className="flex flex-wrap justify-center gap-3 mb-12 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <button
               onClick={() => setSelectedCategory("All")}
               className={`group relative px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
@@ -497,10 +380,7 @@ const Technology = () => {
                   ? "bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg shadow-red-600/30"
                   : "bg-gray-900 text-gray-400 hover:text-white border border-gray-800 hover:border-red-600/50"
               }`}
-              style={{
-                animation: "pop-in 0.5s ease forwards",
-                animationDelay: "0ms",
-              }}
+              style={{ animation: "pop-in 0.5s ease forwards", animationDelay: "0ms" }}
             >
               <span className="relative z-10 flex items-center gap-2">
                 <Globe className="w-4 h-4" />
@@ -511,7 +391,6 @@ const Technology = () => {
               )}
             </button>
 
-            {/* Category Buttons */}
             {categories.map((category, idx) => (
               <button
                 key={category._id}
@@ -521,10 +400,7 @@ const Technology = () => {
                     ? "bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg shadow-red-600/30"
                     : "bg-gray-900 text-gray-400 hover:text-white border border-gray-800 hover:border-red-600/50"
                 }`}
-                style={{
-                  animation: "pop-in 0.5s ease forwards",
-                  animationDelay: `${(idx + 1) * 80}ms`,
-                }}
+                style={{ animation: "pop-in 0.5s ease forwards", animationDelay: `${(idx + 1) * 80}ms` }}
               >
                 <span className="relative z-10 flex items-center gap-2">
                   {getIconForCategory(category.name)}
@@ -537,7 +413,6 @@ const Technology = () => {
             ))}
           </div>
 
-          {/* Loading State */}
           {loading && (
             <div className="text-center py-20">
               <div className="inline-block w-12 h-12 border-4 border-red-600 border-t-transparent rounded-full animate-spin"></div>
@@ -545,26 +420,21 @@ const Technology = () => {
             </div>
           )}
 
-          {/* Error State */}
           {error && !loading && (
             <div className="text-center py-20">
               <p className="text-red-500 text-lg">{error}</p>
             </div>
           )}
 
-          {/* Empty State - No Products */}
           {!loading && !error && newsItems.length === 0 && (
             <div className="text-center py-20">
               <Newspaper className="w-16 h-16 text-gray-600 mx-auto mb-4" />
               <p className="text-gray-400 text-lg">
-                {selectedCategory === "All"
-                  ? "No products available at the moment"
-                  : "No products found in this category"}
+                {selectedCategory === "All" ? "No products available at the moment" : "No products found in this category"}
               </p>
             </div>
           )}
 
-          {/* News Grid - DYNAMIC */}
           {!loading && !error && newsItems.length > 0 && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsItems.map((news, idx) => (
@@ -573,17 +443,13 @@ const Technology = () => {
                   className="group relative bg-gradient-to-b from-gray-900 to-black rounded-2xl overflow-hidden border border-gray-800 hover:border-red-600/50 transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-600/20 animate-slide-up"
                   style={{ animationDelay: `${idx * 150}ms` }}
                 >
-                  {/* Trending Badge */}
                   {news.trending && (
                     <div className="absolute top-4 left-4 z-20 flex items-center gap-1 px-3 py-1.5 bg-red-600 rounded-full shadow-lg animate-pulse">
                       <TrendingUp className="w-4 h-4 text-white" />
-                      <span className="text-white text-xs font-bold">
-                        Trending
-                      </span>
+                      <span className="text-white text-xs font-bold">Trending</span>
                     </div>
                   )}
 
-                  {/* Image */}
                   <div className="relative h-56 overflow-hidden bg-gray-800">
                     {news.image ? (
                       <img
@@ -598,20 +464,14 @@ const Technology = () => {
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
 
-                    {/* Category Badge */}
                     <div className="absolute top-4 right-4 px-3 py-1 bg-black/60 backdrop-blur-sm rounded-full border border-red-500/30">
-                      <span className="text-red-400 text-xs font-semibold">
-                        {news.category}
-                      </span>
+                      <span className="text-red-400 text-xs font-semibold">{news.category}</span>
                     </div>
 
-                    {/* Shine Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
                   </div>
 
-                  {/* Content */}
                   <div className="p-6">
-                    {/* Meta Info */}
                     <div className="flex items-center gap-4 mb-4 text-gray-500 text-sm">
                       <div className="flex items-center gap-1">
                         <Calendar className="w-4 h-4" />
@@ -627,33 +487,22 @@ const Technology = () => {
                       </div>
                     </div>
 
-                    {/* Title */}
                     <h3 className="text-xl font-bold text-white mb-3 line-clamp-2 group-hover:text-red-400 transition-colors duration-300">
                       {news.title}
                     </h3>
 
-                    {/* Description */}
-                    <p className="text-gray-400 text-sm mb-4 line-clamp-3 leading-relaxed">
-                      {news.description}
-                    </p>
+                    <p className="text-gray-400 text-sm mb-4 line-clamp-3 leading-relaxed">{news.description}</p>
 
-                    {/* Footer */}
                     <div className="flex items-center justify-between pt-4 border-t border-gray-800">
                       <div className="flex items-center gap-2">
                         <div className="w-8 h-8 bg-gradient-to-br from-red-600 to-red-700 rounded-full flex items-center justify-center">
                           <span className="text-white text-xs font-bold">
-                            {news.author
-                              .split(" ")
-                              .map((n) => n[0])
-                              .join("")}
+                            {news.author.split(" ").map((n) => n[0]).join("")}
                           </span>
                         </div>
-                        <span className="text-gray-500 text-sm">
-                          {news.author}
-                        </span>
+                        <span className="text-gray-500 text-sm">{news.author}</span>
                       </div>
 
-                      {/* Action Buttons */}
                       <div className="flex items-center gap-2">
                         <a
                           href={news.link}
@@ -673,7 +522,6 @@ const Technology = () => {
                     </div>
                   </div>
 
-                  {/* Hover Glow */}
                   <div className="absolute inset-0 bg-gradient-to-t from-red-600/0 via-transparent to-transparent opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none"></div>
                 </article>
               ))}
@@ -682,29 +530,19 @@ const Technology = () => {
         </div>
       </section>
 
-      {/* Tech Stack - Animated Grid */}
+      {/* Tech Stack Section */}
       <section className="bg-black py-24 relative overflow-hidden">
-        {/* Background Tech Image */}
         <div className="absolute inset-0 opacity-5">
-          <img
-            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=800&fit=crop"
-            alt="Technology Background"
-            className="w-full h-full object-cover"
-          />
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=800&fit=crop" alt="Technology Background" className="w-full h-full object-cover" />
         </div>
 
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-red-600 to-transparent"></div>
 
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">
-              Technologies We Excel In
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">Technologies We Excel In</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-800 mx-auto mb-6 animate-scale-x"></div>
-            <p
-              className="text-gray-400 text-lg animate-fade-in-up"
-              style={{ animationDelay: "0.2s" }}
-            >
+            <p className="text-gray-400 text-lg animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               Modern, reliable, and battle-tested tech stack
             </p>
           </div>
@@ -727,8 +565,6 @@ const Technology = () => {
                   style={{ animationDelay: `${idx * 80}ms` }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-red-600/0 to-red-600/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-xl"></div>
-
-                  {/* Animated Border */}
                   <div className="absolute inset-0 rounded-xl overflow-hidden">
                     <div className="absolute inset-0 border-2 border-red-600 opacity-0 group-hover:opacity-100 animate-border-glow"></div>
                   </div>
@@ -746,33 +582,22 @@ const Technology = () => {
         </div>
       </section>
 
-      {/* Domain Solutions - Premium Animated Cards */}
+      {/* Domain Solutions Section */}
       <section className="py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-red-600 to-transparent"></div>
 
-        {/* Background Animated Images */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-10 w-64 h-64 rounded-2xl overflow-hidden animate-float">
-            <img
-              src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=400&fit=crop"
-              alt="Business"
-              className="w-full h-full object-cover"
-            />
+            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=400&fit=crop" alt="Business" className="w-full h-full object-cover" />
           </div>
           <div className="absolute bottom-20 right-10 w-72 h-72 rounded-2xl overflow-hidden animate-float-delayed">
-            <img
-              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=400&fit=crop"
-              alt="Team"
-              className="w-full h-full object-cover"
-            />
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=400&fit=crop" alt="Team" className="w-full h-full object-cover" />
           </div>
         </div>
 
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">
-              Industry-Specific Solutions
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 animate-fade-in-up">Industry-Specific Solutions</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-red-800 mx-auto animate-scale-x"></div>
           </div>
 
@@ -831,22 +656,15 @@ const Technology = () => {
                   className="group relative bg-gradient-to-br from-gray-900 to-black rounded-2xl overflow-hidden border border-gray-800 hover:border-red-600/50 transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-600/20 animate-slide-up"
                   style={{ animationDelay: `${idx * 200}ms` }}
                 >
-                  {/* Header with Gradient and Animation */}
-                  <div
-                    className={`relative h-48 bg-gradient-to-br ${domain.gradient} flex flex-col items-center justify-center text-white p-8 overflow-hidden`}
-                  >
-                    {/* Animated Shine Effect */}
+                  <div className={`relative h-48 bg-gradient-to-br ${domain.gradient} flex flex-col items-center justify-center text-white p-8 overflow-hidden`}>
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
 
                     <div className="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 animate-bounce-slow border border-white/20">
                       <DomainIcon className="w-10 h-10 text-white" />
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-center tracking-wide relative z-10">
-                      {domain.title}
-                    </h3>
+                    <h3 className="text-2xl md:text-3xl font-bold text-center tracking-wide relative z-10">{domain.title}</h3>
                   </div>
 
-                  {/* Content with Staggered Animation */}
                   <div className="p-8 bg-gradient-to-b from-black to-gray-900">
                     <ul className="space-y-4">
                       {domain.items.map((item, itemIdx) => {
@@ -855,11 +673,7 @@ const Technology = () => {
                           <li
                             key={item.text}
                             className="flex items-start gap-3 text-gray-300 group-hover:text-white transition-all duration-300 hover:translate-x-2"
-                            style={{
-                              opacity: 0,
-                              animation: "slideInLeft 0.5s ease forwards",
-                              animationDelay: `${idx * 200 + itemIdx * 100}ms`,
-                            }}
+                            style={{ opacity: 0, animation: "slideInLeft 0.5s ease forwards", animationDelay: `${idx * 200 + itemIdx * 100}ms` }}
                           >
                             <ItemIcon className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0 animate-pulse-slow" />
                             <span>{item.text}</span>
@@ -869,7 +683,6 @@ const Technology = () => {
                     </ul>
                   </div>
 
-                  {/* Hover Glow Effect */}
                   <div className="absolute inset-0 bg-gradient-to-t from-red-600/0 via-transparent to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none"></div>
                 </div>
               );
@@ -878,173 +691,68 @@ const Technology = () => {
         </div>
       </section>
 
-      {/* Custom CSS for Animations */}
+      {/* Animations */}
       <style jsx>{`
         @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-20px) rotate(5deg);
-          }
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(5deg); }
         }
-
         @keyframes float-delayed {
-          0%,
-          100% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-30px) rotate(-5deg);
-          }
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-30px) rotate(-5deg); }
         }
-
         @keyframes float-slow {
-          0%,
-          100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-15px);
-          }
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-15px); }
         }
-
         @keyframes slideInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
+          from { opacity: 0; transform: translateX(-30px); }
+          to { opacity: 1; transform: translateX(0); }
         }
-
         @keyframes fade-in {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
+          from { opacity: 0; }
+          to { opacity: 1; }
         }
-
         @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
         }
-
         @keyframes slide-up {
-          from {
-            opacity: 0;
-            transform: translateY(50px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          from { opacity: 0; transform: translateY(50px); }
+          to { opacity: 1; transform: translateY(0); }
         }
-
         @keyframes pop-in {
-          0% {
-            opacity: 0;
-            transform: scale(0.5);
-          }
-          100% {
-            opacity: 1;
-            transform: scale(1);
-          }
+          0% { opacity: 0; transform: scale(0.5); }
+          100% { opacity: 1; transform: scale(1); }
         }
-
         @keyframes scale-x {
-          from {
-            transform: scaleX(0);
-          }
-          to {
-            transform: scaleX(1);
-          }
+          from { transform: scaleX(0); }
+          to { transform: scaleX(1); }
         }
-
         @keyframes border-glow {
-          0%,
-          100% {
-            opacity: 0;
-          }
-          50% {
-            opacity: 1;
-          }
+          0%, 100% { opacity: 0; }
+          50% { opacity: 1; }
         }
-
         @keyframes bounce-slow {
-          0%,
-          100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-10px);
-          }
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
         }
-
         @keyframes pulse-slow {
-          0%,
-          100% {
-            opacity: 0.5;
-          }
-          50% {
-            opacity: 1;
-          }
+          0%, 100% { opacity: 0.5; }
+          50% { opacity: 1; }
         }
 
-        .animate-float {
-          animation: float 6s ease-in-out infinite;
-        }
-
-        .animate-float-delayed {
-          animation: float-delayed 7s ease-in-out infinite;
-        }
-
-        .animate-float-slow {
-          animation: float-slow 8s ease-in-out infinite;
-        }
-
-        .animate-fade-in {
-          animation: fade-in 1s ease-out;
-        }
-
-        .animate-fade-in-up {
-          animation: fade-in-up 0.8s ease-out;
-        }
-
-        .animate-slide-up {
-          animation: slide-up 0.8s ease-out;
-        }
-
-        .animate-pop-in {
-          animation: pop-in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
-
-        .animate-scale-x {
-          animation: scale-x 0.8s ease-out;
-        }
-
-        .animate-border-glow {
-          animation: border-glow 2s ease-in-out infinite;
-        }
-
-        .animate-bounce-slow {
-          animation: bounce-slow 3s ease-in-out infinite;
-        }
-
-        .animate-pulse-slow {
-          animation: pulse-slow 3s ease-in-out infinite;
-        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float-delayed { animation: float-delayed 7s ease-in-out infinite; }
+        .animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+        .animate-fade-in { animation: fade-in 1s ease-out; }
+        .animate-fade-in-up { animation: fade-in-up 0.8s ease-out; }
+        .animate-slide-up { animation: slide-up 0.8s ease-out; }
+        .animate-pop-in { animation: pop-in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+        .animate-scale-x { animation: scale-x 0.8s ease-out; }
+        .animate-border-glow { animation: border-glow 2s ease-in-out infinite; }
+        .animate-bounce-slow { animation: bounce-slow 3s ease-in-out infinite; }
+        .animate-pulse-slow { animation: pulse-slow 3s ease-in-out infinite; }
       `}</style>
     </div>
   );
