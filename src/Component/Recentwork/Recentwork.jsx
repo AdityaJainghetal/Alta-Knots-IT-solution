@@ -24,9 +24,9 @@ import img3 from "../Mobile/img/recent5.jpg";
 import img4 from "../Mobile/img/recent6.jpg";
 import img5 from "../Mobile/img/recent1.jpg";
 import img6 from "../Mobile/img/recent8.jpg";
-import img7 from "../Mobile/img/recent2.jpg";
+import img7 from "../Mobile/img/recentimage3.jpg";
 import img8 from "../Mobile/img/recent10.jpg";
-import img9 from "../Mobile/img/recent11.jpg";
+import img9 from "../Mobile/img/recentimage.jpg";
 
 
 const AnimatedSphere = ({ position, color }) => {
