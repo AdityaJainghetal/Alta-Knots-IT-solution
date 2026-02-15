@@ -1,10 +1,8 @@
-
-
 import React, { useEffect, useState } from "react";
-import img1 from "../Mobile/img/mobileviewpart1.png";
-import img2 from "../Mobile/img/mobileviewpart2.png";
-import img3 from "../Mobile/img/mobileviewpart3.png";
-// import mobile from "./img/screenshot-frame.png"
+
+import img1 from "../Mobile/img/22.png";
+import img2 from "../Mobile/img/23.png";
+import img3 from "../Mobile/img/24.png";
 
 const MobileOnboarding = () => {
   const images = [img1, img2, img3];
@@ -20,10 +18,8 @@ const MobileOnboarding = () => {
 
   return (
     <div className="min-h-screen bg-black px-4 py-16">
-      
       {/* Main Wrapper */}
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-
         {/* Left Content */}
         <div className="text-center md:text-left md:w-1/2">
           <h1 className="text-white text-2xl md:text-4xl font-bold mb-4 leading-snug">
@@ -42,21 +38,20 @@ const MobileOnboarding = () => {
 
         {/* Right Mobile Mockup */}
         <div className="md:w-1/2 flex justify-center">
-
-          <div className="
+          <div
+            className="
             relative 
-            w-[240px] h-[480px]
-            sm:w-[260px] sm:h-[520px]
-            md:w-[280px] md:h-[560px]
+            w-60 h-105
+            sm:w-65 sm:h-115
+            md:w-70 md:h-125
             rounded-[2.5rem] 
             bg-black 
             shadow-[0_20px_60px_rgba(255,0,0,0.25)] 
-            p-2
-          ">
-
+           
+          "
+          >
             {/* Screen */}
             <div className="relative w-full h-full rounded-[2rem] overflow-hidden bg-gradient-to-br from-black via-zinc-900 to-red-900">
-
               {/* Slider Images */}
               {/* {images.map((img, index) => (
                 <img
@@ -68,28 +63,27 @@ const MobileOnboarding = () => {
                   }`}
                 />
               ))} */}
-<div className="relative w-full h-[600px] overflow-hidden">
-  {images.map((img, index) => (
-    <img
-      key={index}
-      src={img}
-      alt="onboarding"
-      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
-        active === index ? "opacity-100" : "opacity-0"
-      }`}
-    />
-  ))}
-</div>
+              <div className="relative w-full h-full overflow-hidden">
+                {images.map((img, index) => (
+                  <img
+                    key={index}
+                    src={img}
+                    alt="onboarding"
+                    className={`absolute inset-0 w-full h-full object-cover object-center scale-110 transition-opacity duration-700 ${
+                      active === index ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                ))}
+              </div>
 
               {/* Overlay */}
-              <div className="absolute bottom-0 w-full px-5 pb-6 text-white bg-gradient-to-t from-black/90 via-black/60 to-transparent">
-
+              <div className="absolute bottom-0 w-full px-5 pb-12 text-white bg-gradient-to-t from-black/90 via-black/60 to-transparent">
                 {/* <h2 className="text-lg font-bold tracking-wide mb-2">
                   IT SOLUTIONS
                 </h2> */}
 
                 {/* Dots */}
-                <div className="flex justify-center gap-2 mb-4">
+                <div className="flex justify-center gap-2 mb-2">
                   {images.map((_, i) => (
                     <span
                       key={i}
@@ -105,15 +99,11 @@ const MobileOnboarding = () => {
                   <button className="hover:text-red-500 transition">
                     Skip
                   </button>
-                  <button className="font-semibold text-red-500">
-                    Next
-                  </button>
+                  <button className="font-semibold text-red-500">Next</button>
                 </div>
-
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>

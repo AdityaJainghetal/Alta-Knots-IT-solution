@@ -40,6 +40,11 @@ import { useNavigate } from "react-router-dom";
 import img1 from "./Mobile/img/mobileviewpart1.png";
 import img2 from "./Mobile/img/mobileviewpart2.png";
 import img3 from "./Mobile/img/mobileviewpart3.png";
+
+
+
+
+
 import img6 from "./Mobile/img/mobileview.png";
 import FounderImg from "./Mobile/img/nagar.jpg";
 import MdImg from "./Mobile/img/Md.jpg";

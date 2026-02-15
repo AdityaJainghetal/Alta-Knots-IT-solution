@@ -29,8 +29,7 @@ const TechNews = () => {
 
         const result = await response.json();
 
-        // The real structure is: { success: true, count: 1, message: "...", data: [ ... ] }
-        // So we need to use result.data
+       
         let items = result.data || [];
 
         // Make sure it's always an array
