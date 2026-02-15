@@ -89,3 +89,19 @@ body {
   background-color: #000;
   color: #fff;
 }
+
+.element {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  will-change: transform, opacity;   /* GPU acceleration के लिए */
+}
+
+.element:hover {
+  transform: translateY(-10px) scale(1.05);
+  opacity: 0.9;
+}
+
+.animated-element {
+  transform: translate3d(0,0,0);   /* या translateZ(0) */
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
